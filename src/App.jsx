@@ -1,6 +1,6 @@
 import './App.css'
 import NavBar from './pages/NavBar.jsx'
-import { BrowserRouter as Router, Route, Routes } from 'react-router-dom'
+import { HashRouter as Router, Route, Routes } from 'react-router-dom'
 import Back from './components/back.jsx';
 
 /* Portfolio Pages */
