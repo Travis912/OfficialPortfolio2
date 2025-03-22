@@ -1,6 +1,6 @@
 import './App.css'
 import NavBar from './pages/NavBar.jsx'
-import { HashRouter as Router, Route, Routes } from 'react-router-dom'
+import { HashRouter, Route, Routes } from 'react-router-dom';
 import Back from './components/back.jsx';
 
 /* Portfolio Pages */
@@ -26,7 +26,7 @@ import Banff from './projects/banff/banff.jsx';
 
 function App() {
   return (
-    <Router>
+    <HashRouter>
       <Routes>
         <Route path="/" element={<><NavBar /><Home /></>} />
         <Route path="/resume" element={<><NavBar /><Resume /></>} />
@@ -40,7 +40,7 @@ function App() {
         <Route path="/lamborghini" element={<><Back /><Lamborghini /></>} />
         <Route path="/banff" element={<><Back /><Banff /></>} />
       </Routes>
-    </Router>
+    </HashRouter>
   )
 }
 
