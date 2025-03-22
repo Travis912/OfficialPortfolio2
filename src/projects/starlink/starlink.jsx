@@ -1,7 +1,6 @@
 import './starlink.css';
 import StarlinkNav from './starlinkNav';
 import contractsImg from './contracts-img.jpg';
-import getOnline from './starlink-vid-2.mp4';
 import vidCoverTwo from './starlink-vid-cover-2.png';
 
 export default function Starlink() {
@@ -63,7 +62,7 @@ export default function Starlink() {
 
                     <section className='get-online-section'>
                         <div className='getOnline-vid-container'>
-                            <video className="get-online-video" src={getOnline} controls></video>
+                            <video className="get-online-video" src={vidCoverTwo} controls></video>
                             <img className="get-online-img" src={vidCoverTwo} alt='satelite' ></img>
                         </div>
                         <div className='getOnline-text-container'>

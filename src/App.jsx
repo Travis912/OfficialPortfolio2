@@ -15,9 +15,6 @@ import TheCrew from './projects/space/spaceTheCrew.jsx'
 import SpaceDestinations from './projects/space/spaceDestinations.jsx'
 import Technology from './projects/space/spaceTechnology.jsx'
 
-/* Anytime Fitness */
-import Anytime from './projects/anytime/anytime.jsx';
-
 /* Starlink */
 import Starlink from './projects/starlink/starlink.jsx';
 
@@ -39,7 +36,6 @@ function App() {
         <Route path="/spaceDestinations" element={<><Back /><SpaceDestinations /></>} />
         <Route path="/theCrew" element={<><Back /><TheCrew /></>} />
         <Route path="/technology" element={<><Back /><Technology /></>} />
-        <Route path="/anytime" element={<><Back /><Anytime /></>} />
         <Route path="/starlink" element={<><Back /><Starlink /></>} />
         <Route path="/lamborghini" element={<><Back /><Lamborghini /></>} />
         <Route path="/banff" element={<><Back /><Banff /></>} />
