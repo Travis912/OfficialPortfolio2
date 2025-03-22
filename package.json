@@ -1,7 +1,6 @@
 {
   "name": "officialportfolio",
   "homepage": "https://travismounsteven.ca/",
-  "private": false,
   "version": "0.0.0",
   "type": "module",
   "scripts": {
