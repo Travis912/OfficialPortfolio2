@@ -1,0 +1,1853 @@
+:root {
+  --banff-side-padding: 4.5vw;
+}
+
+.react-multiple-carousel__arrow--right,
+.react-multiple-carousel__arrow--left {
+  background-color: red;
+  margin-top: 1rem;
+}
+
+.react-multi-carousel-dot-list button {
+  background-color: grey !important;
+  border: none !important;
+  width: 10px !important;
+  height: 10px !important;
+}
+
+.react-multi-carousel-dot--active button {
+  background-color: #b25340 !important;
+  border: none !important;
+}
+
+.banff-above-nav-div {
+  padding: 0 var(--banff-side-padding);
+  display: flex;
+  justify-content: end;
+  align-items: center;
+  background-color: white;
+  width: 100%;
+  height: 30%;
+}
+
+.banff-above-nav-div ul {
+  display: flex;
+  flex-direction: row-reverse;
+  align-items: center;
+  z-index: 3;
+}
+
+.banff-above-nav-div ul li {
+  margin-left: 2vw;
+  font-size: 0.9rem;
+}
+
+.banff-above-nav-div ul li i {
+  color: #b25340;
+}
+
+.banff-above-nav-div ul li:hover {
+  color: #b25340;
+  cursor: pointer;
+}
+
+/* NAV BAR */
+
+.BanffNavDropdown-mobile {
+  display: none !important;
+}
+
+.banff-navbar {
+  display: flex;
+  flex-direction: column;
+  background-color: #f7f5eb;
+  height: 20vh;
+  color: black;
+}
+
+.banff-lower-nav-div {
+  display: flex;
+  padding: 0 var(--banff-side-padding);
+  height: 100%;
+}
+
+.banff-navbar a {
+  text-decoration: none;
+  padding: 14px 20px;
+  display: block;
+}
+
+.banff-navbar a:hover {
+  cursor: pointer;
+}
+
+.banff-logo {
+  z-index: 2;
+}
+
+.banff-hamburger-icon {
+  display: none;
+  z-index: 3;
+}
+
+.banff-nav-links-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  padding-left: 3dvw;
+}
+
+.banff-nav-links {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 1;
+}
+
+.banff-nav-links li a {
+  position: relative;
+  font-weight: 600;
+  color: rgb(41, 41, 41);
+  text-wrap: nowrap;
+  z-index: 9999;
+}
+
+.banff-nav-links li a::after {
+  content: "";
+  position: absolute;
+  width: 72%;
+  justify-self: center;
+  height: 2.5px;
+  background-color: rgb(255, 166, 0);
+  bottom: 0px;
+  left: 1.1rem;
+  opacity: 0;
+  transform: translateY(-5px);
+  transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out;
+}
+
+.banff-nav-links li a:hover::after {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.banff-nav-links li a i {
+  color: #b25340;
+  font-size: 0.5rem;
+}
+
+.build-trip-btn {
+  background-color: #43273b;
+  padding: 15px 30px;
+  color: white;
+  border-radius: 35px;
+  font-size: 1.1rem;
+  font-weight: 600;
+}
+
+.build-trip-btn:hover {
+  background-color: hsl(318, 30%, 29%);
+}
+
+.banff-nav-icons {
+  text-wrap: nowrap;
+  z-index: 2;
+}
+
+.banff-nav-icons i {
+  font-size: 1.5rem;
+  margin-right: 1.5vw;
+  padding: 0.5vw;
+}
+
+.banff-nav-icons i:hover {
+  cursor: pointer;
+  color: #b25340;
+}
+
+/* Nav dropdowns */
+
+.banff-navbar {
+  position: relative;
+}
+
+.banff-dropdown-div {
+  position: absolute;
+  top: -80vh;
+  left: 0;
+  width: 100%;
+  padding-top: 20vh;
+  background-color: rgba(255, 255, 255);
+  z-index: 1;
+  height: 80vh;
+}
+
+.banff-dropdown-content {
+  display: flex;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 1s;
+  padding: 2rem var(--banff-side-padding);
+}
+
+.banff-ATP-nav[aria-expanded="true"] .banff-dropdown-div {
+  visibility: visible;
+  top: 0px;
+  animation: banffDropdown 0.5s ease-in-out;
+}
+
+@keyframes banffDropdown {
+  0% {
+    top: -80vh;
+  }
+  100% {
+    top: 0px;
+  }
+}
+
+.banff-ATP-nav[aria-expanded="true"] .banff-dropdown-content {
+  opacity: 1;
+  animation: fadeInEffect 0.5s ease-in-out 0.5s forwards;
+}
+
+@keyframes fadeInEffect {
+  0% {
+    opacity: 0;
+    visibility: visible;
+  }
+  100% {
+    opacity: 1;
+    visibility: visible;
+  }
+}
+
+.banff-left-dropdown-div {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  width: 35%;
+}
+
+.banff-dropdown-lists-div {
+  display: flex;
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+.banff-dropdown-lists-div ul {
+  display: flex;
+  flex-direction: column;
+}
+
+.banff-dropdown-lists-div ul li {
+  font-size: 1rem;
+  font-weight: 400;
+  padding: 0.5rem;
+}
+
+.banff-dropdown-lists-div ul li:hover {
+  cursor: pointer;
+  color: #b25340;
+}
+
+.banff-right-dropdown-div {
+  height: 100%;
+  width: 65%;
+}
+
+.banff-dropdown-card-div {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: start;
+  width: 100%;
+  height: 100%;
+}
+
+.banff-dropdown-card {
+  display: flex;
+  position: relative;
+  align-items: end;
+  gap: 1rem;
+  width: 30%;
+  background-color: #43273b;
+  color: white;
+  height: 80%;
+  border-radius: 20px;
+  padding: 1rem;
+  font-size: 1.6rem;
+  overflow: hidden;
+}
+
+.banff-dropdown-card:hover {
+  cursor: pointer;
+}
+
+.banff-dropdown-card h6 {
+  z-index: 3;
+}
+
+.banff-dropdown-card img {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  object-fit: cover;
+  object-position: center;
+  transition: transform 0.3s ease-in-out;
+}
+
+.banff-dropdown-card:hover img {
+  transform: scale(1.03);
+}
+
+/* HEADER */
+
+.banff-header {
+  height: 90vh;
+  background-color: #f7f5eb;
+  position: relative;
+  padding: 0 var(--banff-side-padding);
+}
+
+.banff-header-div {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 105vh;
+  width: calc(100% - var(--banff-side-padding) * 2);
+  top: 0;
+  position: absolute;
+  background-color: #43273b;
+  border-radius: 20px;
+}
+
+.banffHeaderLayout {
+  display: flex;
+  background-position: center;
+  background-size: cover;
+  border-radius: 20px;
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+
+.banffHeaderLayout-content-div {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.3);
+  border-radius: 20px;
+  position: absolute;
+}
+
+.banffW1 {
+  background-image: url(./W1.avif);
+}
+
+.banffW2 {
+  background-image: url(./W2.avif);
+}
+
+.banffW3 {
+  background-image: url(./W3.avif);
+}
+
+.banffSp1 {
+  background-image: url(./Sp1.avif);
+}
+
+.banffSp2 {
+  background-image: url(./Sp2.avif);
+}
+
+.banffSp3 {
+  background-image: url(./Sp3.avif);
+}
+
+.banffSu1 {
+  background-image: url(./Su1.avif);
+}
+
+.banffSu2 {
+  background-image: url(./Su2.avif);
+}
+
+.banffSu3 {
+  background-image: url(./Su3.avif);
+}
+
+.banffF1 {
+  background-image: url(./F1.avif);
+}
+
+.banffF2 {
+  background-image: url(./F2.avif);
+}
+
+.banffF3 {
+  background-image: url(./F3.avif);
+}
+
+.banffHeaderLayout-content-div button i {
+  margin-right: 0.5rem;
+  font-size: 1rem;
+  color: rgba(255, 255, 255, 0.85);
+}
+
+.banffHeaderLayout-content-div button:hover {
+  background-color: #b25340;
+  border-radius: 25px;
+}
+
+.banffHeader-btn-1,
+.banffHeader-btn-2,
+.banffHeader-btn-3,
+.banffHeader-btn-4,
+.banffHeader-btn-5,
+.banffHeader-btn-6,
+.banffHeader-btn-7 {
+  position: absolute;
+  width: fit-content;
+  height: fit-content;
+  padding: 0.5rem 1rem;
+  color: white;
+  font-size: 1.1rem;
+  font-weight: 600;
+  opacity: 0;
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.banffFadeIn {
+  animation: fadeIn 0s ease-in;
+  opacity: 1;
+}
+
+.banffHeader-btn-1 {
+  top: 20%;
+  right: 40%;
+}
+
+.banffHeader-btn-2 {
+  top: 60%;
+  left: 10%;
+}
+
+.banffHeader-btn-3 {
+  bottom: 20%;
+  right: 30%;
+}
+
+.banffHeader-btn-4 {
+  top: 30%;
+  left: 20%;
+}
+
+.banffHeader-btn-5 {
+  bottom: 25%;
+  right: 20%;
+}
+
+.banffHeader-btn-6 {
+  top: 25%;
+  right: 20%;
+}
+
+.banffHeader-btn-7 {
+  top: 60%;
+  left: 20%;
+}
+
+.banffHeader-btn:hover {
+  background-color: #b25340;
+  border-radius: 25px;
+}
+
+.banffHeaderLayout-content-div h1 {
+  font-size: 5rem;
+}
+
+@keyframes banffFallIn {
+  0% {
+    transform: translateY(-50px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+.banffFall-in {
+  animation: banffFallIn 0.5s ease-out;
+}
+
+.banff-header-btn-div {
+  display: flex;
+  gap: 1vw;
+  position: absolute;
+  bottom: 2rem;
+  left: 5rem;
+  align-items: center;
+  width: 100%;
+}
+
+.banff-header-btn-div > button {
+  color: rgba(255, 255, 255, 0.8);
+  padding: 0.5rem 1rem;
+  border-radius: 25px;
+  font-weight: 600;
+  font-size: 0.9rem;
+}
+
+.banff-header-btn-div > button:first-of-type {
+  color: white;
+}
+
+.banff-header-btn-div button:hover {
+  background-color: white;
+  color: black !important;
+}
+
+.banffHeaderBtnActive {
+  color: rgb(255, 255, 255) !important;
+  position: relative;
+  border-radius: 50%;
+  padding: 0.76rem;
+  font-size: 1.1rem;
+  font-weight: 600;
+  border: 2.2px dotted white;
+}
+
+.banffHeaderBtnNotActive {
+  color: rgba(255, 255, 255, 0.8);
+  font-size: 1.1rem;
+  font-weight: 600;
+}
+
+.banffHeaderBtnNotActive:hover {
+  border-radius: 50%;
+  padding: calc(1rem + 2px);
+}
+
+.seasonMenuOpen {
+  position: absolute;
+  width: fit-content;
+  background-color: white;
+  transition: width 1s ease-in-out;
+  border-radius: 25px;
+  display: flex;
+  flex-direction: row;
+  z-index: 2;
+}
+
+.seasonMenuOpen button {
+  color: black;
+  height: 100%;
+  padding: 1rem 2rem;
+  font-weight: 600;
+  display: flex;
+  flex-direction: column;
+}
+
+.seasonMenuOpen button span {
+  font-size: 0.8rem;
+  font-weight: 400;
+}
+
+.seasonMenuOpen button:first-of-type {
+  border-radius: 25px 0px 0px 25px;
+}
+
+.seasonMenuOpen button:last-of-type {
+  border-radius: 0px 25px 25px 0px;
+}
+
+.seasonMenuOpen button:hover {
+  background-color: #43273b;
+  color: white !important;
+}
+
+.seasonMenuClosed {
+  width: 0px;
+  display: none;
+  position: absolute;
+  transition: width 1s ease-in-out;
+}
+
+.banff-header-btn-div > button:not(:first-of-type) {
+  width: 40px;
+  height: 40px;
+  padding: 0px;
+  font-size: 1.1rem;
+}
+
+/* BODY */
+
+.banff-main {
+  height: 100vh;
+}
+
+/* Get Inspired Section */
+
+.get-insipired-section {
+  display: flex;
+  height: fit-content;
+  align-items: start;
+  justify-content: start;
+  flex-direction: column;
+  padding-top: 20vh;
+  padding-left: var(--banff-side-padding);
+  padding-right: var(--banff-side-padding);
+}
+
+.get-insipired-section h3 {
+  font-size: 2.5rem;
+  margin-bottom: 0.5rem;
+  margin-top: 3rem;
+}
+
+.get-insipired-section ul div {
+  display: flex;
+  flex-direction: row;
+  gap: 1rem;
+  align-items: center;
+}
+
+.get-insipired-section ul li button {
+  font-size: 1.05rem;
+  color: rgba(0, 0, 0, 0.6);
+}
+
+.get-insipired-section ul li button:hover {
+  color: rgba(0, 0, 0);
+}
+
+.get-insipired-section ul li button.active {
+  color: black;
+  border-bottom: 2px solid orange;
+  padding: 0.5rem 0px;
+}
+
+.BanffNew-carousel-track {
+  display: flex;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  scroll-behavior: smooth;
+  width: 100%;
+  height: fit-content;
+  padding-bottom: 2rem;
+  padding-top: 2rem;
+  align-items: start !important;
+}
+
+.BanffNew-carousel-indivisual-div {
+  width: 100%;
+  height: 350px;
+  color: white;
+  padding: 0 1rem;
+}
+
+.trip-carousel-card {
+  width: 100%;
+  height: 500px;
+  color: white;
+  padding: 0 1rem;
+  display: flex;
+  flex-direction: column !important;
+}
+
+.banff-carousel-trip-img {
+  position: absolute;
+  left: 0px;
+  top: 0px;
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  filter: brightness(80%);
+}
+
+.BanffNew-trip-img-div {
+  width: 100%;
+  height: 350px;
+  position: relative;
+  border-radius: 20px;
+  overflow: hidden;
+}
+
+.BanffNew-img-div {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  border-radius: 20px;
+  overflow: hidden;
+}
+
+.banff-carousel-img {
+  position: absolute;
+  left: 0px;
+  top: 0px;
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  filter: brightness(80%);
+}
+
+.banff-carousel-img:hover {
+  cursor: pointer;
+  transform: scale(1.05);
+  transition: transform 0.3s ease-in-out;
+}
+
+.banff-carousel-trip-img:hover {
+  cursor: pointer;
+  transform: scale(1.05);
+  transition: transform 0.3s ease-in-out;
+}
+
+.BanffNew-carousel-indivisual-div h3 {
+  position: absolute;
+  bottom: 1rem;
+  left: 1rem;
+  font-size: 1.1rem;
+  color: white;
+  text-wrap: wrap;
+  max-width: 60%;
+}
+
+.trip-title-divv {
+  position: absolute;
+  display: flex;
+  top: 100%;
+  flex-direction: column !important;
+  color: black;
+  font-size: 1.2rem;
+  left: 0px;
+  width: 100%;
+  height: fit-content;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  align-items: start !important;
+  padding-top: 1rem;
+}
+
+.trip-title-div {
+  display: flex;
+  top: 100%;
+  flex-direction: column !important;
+  color: black;
+  font-size: 1.2rem;
+  left: 0px;
+  width: 100%;
+  height: fit-content;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  align-items: start !important;
+}
+
+.days-and-experinces-div {
+  display: flex;
+  flex-direction: row;
+  gap: 1rem;
+  font-size: 1rem;
+}
+
+.days-and-experinces-div i {
+  color: #b25340;
+  margin-right: 0.5rem;
+  font-size: 0.9rem;
+}
+
+/* Snow season section */
+
+.snow-season-section {
+  height: 100vh;
+  display: flex;
+  padding: 0px var(--banff-side-padding);
+  gap: 2vw;
+}
+
+.snow-season-div {
+  display: flex;
+  flex-direction: column;
+  width: 50%;
+  height: 90%;
+  border-radius: 20px;
+  align-items: start;
+  color: white;
+  margin-top: 20vh;
+}
+
+.snow-season-img-div {
+  background-color: rgba(0, 0, 0, 0.2);
+  width: 100%;
+  height: 100%;
+  padding: 4rem 3rem;
+  border-radius: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.snow-season-div:first-of-type {
+  background-color: #43273b;
+  background: url(./snowSeason.jpg);
+  background-position: center;
+}
+
+.snow-season-div:last-of-type {
+  background-color: #43273b;
+  background: url(./buyNow.jpg);
+  background-position: center;
+}
+
+.snow-season-text-div p {
+  max-width: 45ch;
+  line-height: 1.5rem;
+  font-size: 1.1rem;
+}
+
+.snow-season-text-div h3 {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+}
+
+.snow-season-div button {
+  background-color: white;
+  color: black;
+  padding: 1rem 2rem;
+  border-radius: 25px;
+  font-size: 1.1rem;
+  font-weight: 600;
+  width: fit-content;
+}
+
+.snow-season-div button:hover {
+  background-color: #b25340;
+  color: white;
+}
+
+/* Before You Go Section */
+
+.before-you-go-section {
+  height: 30vh;
+  margin-top: 30vh;
+  padding: 0px var(--banff-side-padding);
+}
+
+.before-you-go-section:hover {
+  color: white;
+  cursor: pointer;
+}
+
+.before-you-go-section h3 {
+  font-size: 2rem;
+  margin-bottom: 2rem;
+  color: #000;
+}
+
+.before-you-go-card-div {
+  display: flex;
+  width: 100%;
+  height: 100%;
+  justify-content: space-between;
+}
+
+.before-you-go-card {
+  background-color: #f7f3f9;
+  width: 20vw;
+  height: 100%;
+  border-radius: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: end;
+  padding: 1rem;
+  color: black;
+}
+
+.before-you-go-card:hover {
+  background-color: #6c355d;
+  color: white;
+}
+
+.before-you-go-card i {
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+.before-you-go-card h6 {
+  font-size: 1.2rem;
+  margin-bottom: 1rem;
+}
+
+.before-you-go-card:hover p {
+  display: block;
+}
+
+.before-you-go-card p {
+  display: none;
+  margin-bottom: 1rem;
+  line-height: 1.3rem;
+}
+
+.before-you-go-card a {
+  font-weight: 600;
+}
+
+.before-you-go-card:hover a {
+  color: white;
+}
+
+/* Accomodation Section */
+
+.find-accommodation-section {
+  height: 50vh;
+  margin-top: 30vh;
+  padding: 0px var(--banff-side-padding);
+}
+
+.accomodation-header-div {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  padding: 1rem 0px;
+}
+
+.accomodation-header-div h3 {
+  font-size: 3.5rem;
+  font-weight: 600;
+}
+
+.accomodation-header-div button {
+  background-color: white;
+  color: black;
+  padding: 0.75rem 2rem;
+  border-radius: 25px;
+  font-size: 1.1rem;
+  border: 2px solid black;
+}
+
+.accomodation-header-div button:hover {
+  background-color: #43273b;
+  color: white;
+  border: 2px solid #43273b;
+}
+
+.accomodation-card-div {
+  display: flex;
+  gap: 2vw;
+  height: 100%;
+  width: 100%;
+}
+
+.accomodation-card {
+  background-color: #43273b;
+  width: 100%;
+  height: 100%;
+  border-radius: 20px;
+  color: white;
+  display: flex;
+  padding: 1rem;
+  align-items: end;
+  background-position: center;
+  background-size: cover;
+  position: relative;
+  overflow: hidden;
+  transition: transform 0.5s ease;
+}
+
+.accomodation-card:hover {
+  cursor: pointer;
+  transform: scale(1.03);
+}
+
+.accomodation-card h6 {
+  font-size: 1.2rem;
+  margin-bottom: 1rem;
+}
+
+.acc-hotels {
+  background-image: url(./acc-hotels.jpg);
+}
+.acc-cabins {
+  background-image: url(./acc-cabins.jpg);
+}
+.acc-hostels {
+  background-image: url(./acc-hostels.jpg);
+}
+.acc-bb {
+  background-image: url(./acc-bb.jpg);
+}
+
+.Accomodation-btn {
+  display: none;
+}
+
+/* Plan Dream Section */
+
+.plan-dream-section {
+  margin-top: 25vh;
+  margin-bottom: 20vh;
+  height: 100vh;
+  padding: 0px var(--banff-side-padding);
+}
+
+.plan-dream-div {
+  width: 100%;
+  height: 100%;
+  border-radius: 20px;
+  background-image: url(./planDream.jpg);
+  background-size: cover;
+  background-position: center;
+}
+
+.plan-dream-div div {
+  background-color: rgba(0, 0, 0, 0.3);
+  height: 100%;
+  border-radius: 20px;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.plan-dream-div div h3 {
+  font-size: 5rem;
+}
+
+.plan-dream-div div p {
+  font-size: 1.5rem;
+  margin-top: 1rem;
+}
+
+.plan-dream-div div button {
+  color: black;
+  background-color: white;
+  border-radius: 25px;
+  padding: 1rem 2rem;
+  font-weight: 600;
+  margin-top: 3rem;
+  font-size: 1.1rem;
+}
+
+.plan-dream-div div button:hover {
+  background-color: #b25340;
+  color: white;
+}
+
+/* Ft Stories Section */
+
+.Featered-stories-section {
+  width: 100%;
+  margin-bottom: 20vh;
+  padding-top: 5vh;
+  color: white;
+}
+
+.Featered-stories-section img {
+  height: 95%;
+  width: 100%;
+  object-fit: cover;
+  border-radius: 20px;
+  margin-top: 15vh;
+}
+
+.ft-story-layout {
+  display: flex;
+  gap: 5vw;
+  height: 80%;
+  background-color: #43273b;
+  padding: 0px var(--banff-side-padding);
+  height: 90vh;
+}
+
+.ft-story-layout__text-container {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  width: 40%;
+  margin-top: 10vh;
+}
+
+.ft-story-layout__text-container h2 {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+}
+
+.ft-story-layout__text-container h6 {
+  font-size: 1rem;
+  margin-bottom: 1rem;
+  font-weight: 400;
+}
+
+.ft-story-layout__text-container p {
+  font-size: 1.2rem;
+  margin-bottom: 1rem;
+}
+
+.ft-story-layout__buttons {
+  display: flex;
+  gap: 2vw;
+}
+
+.ft-story-layout__buttons button {
+  color: white;
+  padding: 1rem 2rem;
+  font-size: 1.1rem;
+  border-radius: 25px;
+  font-weight: 600;
+}
+
+.ft-story-layout__buttons button:first-of-type {
+  background-color: #b25340;
+}
+
+.ft-story-layout__buttons button:first-of-type:hover {
+  background-color: #b26640;
+}
+
+.ft-story-layout__buttons button:last-of-type {
+  border: 2px solid white;
+}
+
+.ft-story-layout__buttons button:last-of-type:hover {
+  background-color: white;
+  color: #43273b;
+}
+
+.ft-story-layout__img-container {
+  width: 60%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.ft-btns-div {
+  display: flex;
+  width: 100%;
+  height: 15vh;
+  align-items: end;
+  justify-content: end;
+  padding: 0 var(--banff-side-padding);
+}
+
+.ft-arrow-btn-div {
+  display: flex;
+  gap: 1vw;
+}
+
+.ft-arrow-btn-div button {
+  padding: 1rem;
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  background-color: white;
+  color: #43273b;
+  font-size: 1rem;
+  border: 2px solid #43273b;
+}
+
+.ft-arrow-btn-div button:hover {
+  background-color: #43273b;
+  color: white;
+}
+
+.ft-bubble-btn-ul {
+  display: flex;
+  gap: 1vw;
+  margin-right: 20%;
+}
+
+.ft-bubble-btn-ul li button {
+  background-color: gray;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  color: transparent;
+}
+
+.ft-bubble-btn-ul button.ftActive {
+  background-color: #b25340; /* Change background color */
+}
+
+.ft-bubble-btn-ul-MOBILE {
+  display: none;
+}
+
+/* FOOTER */
+
+.banff-footer {
+  height: 120vh;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.banff-footer h6 {
+  font-size: 1.1rem;
+  margin-bottom: 1rem;
+}
+
+.banff-top-footer-div {
+  height: 60%;
+  display: flex;
+  width: 100%;
+  max-width: calc(100% - var(--banff-side-padding) - var(--banff-side-padding));
+  justify-content: space-between;
+  align-items: center;
+  border-top: 1px solid black;
+  margin: 0 auto;
+  padding-top: 10vh;
+}
+
+.banff-footer-top-left-div {
+  width: 40%;
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  max-width: 40ch;
+}
+
+.banff-footer-top-left-div h6 {
+  font-size: 1.3rem;
+  margin-bottom: 1.5rem;
+}
+
+.banff-footer-top-left-div p {
+  font-size: 1.1rem;
+  line-height: 1.5rem;
+}
+
+.banff-footer-top-left-div button {
+  background-color: #b26640;
+  color: white;
+  padding: 1rem 2rem;
+  border-radius: 25px;
+  font-size: 1.1rem;
+  font-weight: 600;
+  margin-top: 2rem;
+}
+
+.banff-footer-top-left-div button:hover {
+  background-color: #b25340;
+}
+
+.banff-footer-top-left-div button i {
+  margin-right: 1rem;
+}
+
+.banff-footer-top-left-div div {
+  display: flex;
+  gap: 1rem;
+  margin-top: 2rem;
+}
+
+.banff-footer-top-left-div div i {
+  padding: 0.5rem;
+  background-color: #43273b;
+  color: white;
+  border-radius: 50%;
+  font-size: 1.1rem;
+}
+
+.banff-footer-top-right-div {
+  display: flex;
+  justify-content: space-between;
+  width: 60%;
+}
+
+.banff-footer-top-right-ul-div {
+  display: flex;
+  flex-direction: row;
+  gap: 1rem;
+  padding-right: 2rem;
+  width: 100%;
+  justify-content: space-around;
+}
+
+.banff-footer-top-right-div ul {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.banff-footer-top-right-div ul li:not(:first-of-type):hover {
+  color: #b25340;
+  cursor: pointer;
+}
+
+.banff-footer-top-endorsed-div {
+  width: fit-content;
+}
+
+.banff-footer-endorsed-div {
+  display: flex;
+  gap: 1rem;
+  flex-direction: row-reverse;
+  width: calc(150px + 1rem);
+}
+
+.banff-footer-endorsed-div img {
+  width: 75px;
+}
+
+.banff-bottom-footer-div {
+  background-color: rgb(247, 245, 235);
+  height: 35%;
+  padding: 7.5vh var(--banff-side-padding);
+  display: flex;
+  justify-content: space-between;
+}
+
+.banff-bottom-footer-right-div {
+  display: flex;
+  align-items: end;
+  flex-direction: column;
+  gap: 1vh;
+}
+
+.banff-bottom-footer-right-div div:first-of-type {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+
+.banff-bottom-footer-right-div div:first-of-type img {
+  width: 100%;
+  height: fit-content;
+}
+
+.banff-bottom-footer-right-div p {
+  font-size: 0.9rem;
+  line-height: 1rem;
+}
+
+.banff-bottom-footer-left-div {
+  display: flex;
+  width: 50%;
+  max-width: 75ch;
+  line-height: 1.3rem;
+}
+
+.banff-footer-policy-div {
+  display: flex;
+  font-size: 0.8rem;
+  gap: 1rem;
+}
+
+.banff-footer-policy-div p {
+  line-height: 1rem;
+  font-size: 0.8rem;
+  text-decoration: underline;
+}
+
+.banff-footer-policy-div p:hover {
+  color: #b25340;
+  cursor: pointer;
+}
+
+.banff-footer-policy-div-MOBILE {
+  display: none;
+}
+
+.banff-bottom-footer-right-div-MOBILE {
+  display: none;
+}
+
+.banff-footer-icon-div-MOBILE {
+  display: none;
+}
+
+/* Mobile below */
+
+@media screen and (max-width: 1250px) {
+  :root {
+    --banff-side-padding: 2vw;
+  }
+
+  .banff-above-nav-div {
+    display: none;
+  }
+
+  .banff-navbar a {
+    padding: 7px 10px;
+  }
+}
+
+@media screen and (max-width: 1050px) {
+  /* NAV BAR */
+
+  .banff-navbar {
+    flex-direction: column;
+    align-items: flex-start;
+    padding-left: 75px;
+    height: 15dvh;
+  }
+
+  .banff-navbar a {
+    padding: 10px;
+    width: 100%;
+    text-align: left;
+  }
+
+  .banff-lower-nav-div {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+  }
+
+  .banff-hamburger-icon {
+    display: block;
+    font-size: 2rem;
+  }
+
+  .banff-hamburger-icon:hover,
+  .banff-logo:hover {
+    cursor: pointer;
+  }
+
+  .banff-nav-links {
+    display: none;
+  }
+
+  .banff-nav-links-container {
+    width: fit-content;
+  }
+
+  .build-trip-btn {
+    display: none;
+  }
+
+  .mobile-build-trip-btn {
+    background-color: #43273b;
+    padding: 15px 30px;
+    color: white;
+    border-radius: 35px;
+    font-size: 1.1rem;
+    font-weight: 600;
+  }
+
+  .banff-nav-links-container.open {
+    display: block;
+  }
+
+  .banff-nav-links {
+    flex-direction: column;
+  }
+
+  .banff-logo {
+    width: 60px;
+  }
+
+  /* Nav dropdown */
+
+  .banff-hamburger-icon {
+    position: relative;
+    z-index: 3;
+  }
+
+  .BanffNavDropdown-mobile-component {
+    display: block;
+  }
+
+  .banff-mobile-dropdown-div {
+    position: absolute;
+    background-color: white;
+    width: 100dvw;
+    left: -70px;
+    padding-top: 20vh;
+    z-index: 1;
+    min-height: 100dvh;
+    height: fit-content;
+    padding-left: var(--banff-side-padding);
+    padding-right: var(--banff-side-padding);
+    top: -100vh;
+    transition: top 1s ease-in-out;
+  }
+
+  .banff-lower-nav-div {
+    position: relative;
+  }
+
+  .banff-lower-nav-div[aria-expanded="true"] .banff-mobile-dropdown-div {
+    top: 0px;
+  }
+
+  .mobile-dropdown-top-list,
+  .mobile-dropdown-bottom-list {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 1rem;
+  }
+
+  .mobile-dropdown-bottom-list {
+    margin-bottom: 3rem;
+  }
+
+  .mobile-dropdown-top-list li:hover,
+  .mobile-dropdown-bottom-list li:hover {
+    cursor: pointer;
+  }
+
+  .mobile-dropdown-top-list > ul,
+  .WTS,
+  .TI {
+    display: flex;
+    flex-direction: column;
+    font-size: 1.4rem;
+    font-weight: 600;
+    margin-bottom: 1rem;
+    width: calc(100% - 1.5rem);
+  }
+
+  .mobile-dropdown-bottom-list li i {
+    font-size: 1rem;
+    width: 30px;
+  }
+
+  .mobile-dropdown-sublist {
+    display: none;
+  }
+
+  .ATPMobileDropdown-ul[aria-expanded="true"] .mobile-dropdown-sublist {
+    display: block;
+  }
+
+  .VIMobileDropdown-ul[aria-expanded="true"] .mobile-dropdown-sublist {
+    display: block;
+  }
+
+  .TTDMobileDropdown-ul[aria-expanded="true"] .mobile-dropdown-sublist {
+    display: block;
+  }
+
+  .ATPMobileDropdown-ul li,
+  .VIMobileDropdown-ul li,
+  .TTDMobileDropdown-ul li {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .mobile-dropdown-bottom-list {
+    gap: 1rem;
+  }
+
+  .mobile-dropdown-sublist li {
+    font-size: 0.9rem;
+    font-weight: 400;
+    padding: 0.5rem;
+    padding-left: 20px;
+  }
+
+  .mobile-dropdown-sublist li:first-of-type {
+    padding-top: 1rem;
+  }
+
+  /* FOOTER */
+
+  .banff-top-footer-div {
+    flex-direction: column;
+    gap: 2rem;
+    padding-top: 5vh;
+    height: fit-content;
+    align-items: start;
+  }
+
+  .banff-footer-top-left-div {
+    width: 100%;
+  }
+
+  .banff-footer-top-right-div {
+    width: 100%;
+    flex-direction: column;
+    gap: 2rem;
+  }
+
+  .banff-footer-top-right-ul-div {
+    display: flex;
+    gap: 4rem;
+  }
+
+  .banff-footer-top-endorsed-div {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .banff-footer-endorsed-div {
+    justify-content: start;
+    width: 100%;
+  }
+
+  .banff-bottom-footer-left-div {
+    width: 100%;
+    height: fit-content;
+    font-size: 0.9rem;
+    flex-direction: column;
+    gap: 2rem;
+  }
+
+  .banff-bottom-footer-right-div {
+    display: none;
+  }
+
+  .banff-bottom-footer-right-div-MOBILE {
+    display: block;
+    width: 50%;
+  }
+
+  .banff-footer-policy-div-MOBILE {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    padding-bottom: 20vh;
+    background-color: rgb(247, 245, 235);
+  }
+
+  .banff-footer-icon-div-MOBILE {
+    display: flex;
+    gap: 1rem;
+    padding-bottom: 2rem;
+  }
+
+  .banff-footer-icon-div-MOBILE i {
+    padding: 0.5rem;
+    background-color: #43273b;
+    color: white;
+    border-radius: 50%;
+    font-size: 1.1rem;
+  }
+
+  .banff-footer-icon-div-MOBILE i:hover {
+    cursor: pointer;
+  }
+
+  .banff-footer-icon-div i {
+    display: none;
+  }
+
+  .banff-footer-policy-div p span {
+    display: none;
+  }
+
+  /* FEATURED STORIES MOBILE */
+
+  .ft-story-layout {
+    flex-direction: column-reverse;
+    gap: 2rem;
+    padding-bottom: 2rem;
+    height: 80vh;
+    min-height: 80vh;
+    margin-top: 10vh;
+  }
+
+  .ft-story-layout__text-container {
+    flex-direction: column;
+    width: 100%;
+    margin-top: 0px;
+  }
+
+  .ft-story-layout__text-container h2 {
+    font-size: 2rem;
+  }
+
+  .ft-story-layout__text-container p {
+    font-size: 1.1rem;
+  }
+
+  .ft-story-layout__img-container {
+    width: 100%;
+    height: 50vh;
+  }
+
+  .Featered-stories-section img {
+    margin-top: 0vh;
+  }
+
+  .ft-bubble-btn-ul {
+    display: none;
+  }
+
+  .ft-btns-div {
+    height: 10vh;
+  }
+
+  .ft-bubble-btn-ul-MOBILE {
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+    padding: 0px 1rem;
+    height: 100%;
+    padding-top: 0.5rem;
+  }
+
+  .ft-bubble-btn-ul-MOBILE li button {
+    background-color: gray;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    color: transparent;
+    padding: 5px;
+    border: none;
+  }
+
+  .ft-bubble-btn-ul-MOBILE li button:hover {
+    background-color: #b25340;
+    color: transparent;
+  }
+
+  .ft-bubble-btn-ul-MOBILE button.ftActive {
+    background-color: #b25340; /* Change background color */
+  }
+
+  .ft-arrow-btn-div {
+    align-items: center;
+    gap: 1vw;
+    margin: 0 auto;
+  }
+
+  .ft-arrow-btn-div button {
+    border: none;
+  }
+
+  /* PLAN DREAM TRIP */
+  .plan-dream-div div {
+    justify-content: end;
+    padding: 2rem;
+    text-align: center;
+  }
+
+  .plan-dream-div div h3 {
+    font-size: 3rem;
+  }
+
+  .plan-dream-div div p {
+    font-size: 1.2rem;
+  }
+
+  .plan-dream-div div button {
+    padding: 0.9rem 1.8rem;
+    font-size: 1rem;
+  }
+
+  /* ACCOMODATION SECTION */
+
+  .find-accommodation-section {
+    margin-bottom: 30vh;
+  }
+
+  .accomodation-header-div h3 {
+    font-size: 2rem;
+  }
+
+  .accomodation-header-div button {
+    display: none;
+  }
+
+  .Accomodation-btn {
+    display: block;
+    background-color: white;
+    color: black;
+    padding: 0.75rem 2rem;
+    border-radius: 25px;
+    font-size: 1.1rem;
+    border: 2px solid black;
+    margin-top: 5vh;
+  }
+
+  .Accomodation-btn:hover {
+    background-color: #43273b;
+    color: white;
+    border: 2px solid #43273b;
+  }
+
+  /* BEFORE YOU GO */
+
+  .before-you-go-section {
+    margin-bottom: 40vh;
+    margin-top: 15vh;
+  }
+
+  .before-you-go-section h3 {
+    font-size: 1.5rem;
+  }
+
+  .before-you-go-card-div {
+    flex-wrap: wrap;
+    height: fit-content;
+    gap: 1rem;
+  }
+
+  .before-you-go-card {
+    width: 45%;
+    height: 25vh;
+  }
+
+  .before-you-go-card h6 {
+    font-size: 1rem;
+  }
+
+  .before-you-go-card:hover p {
+    display: none;
+  }
+
+  .before-you-go-card a {
+    display: none;
+  }
+
+  /* snow season section */
+
+  .snow-season-section {
+    flex-direction: column;
+    height: fit-content;
+    gap: 2rem;
+  }
+
+  .snow-season-div {
+    width: 100%;
+    height: 80vh;
+    margin-top: 0vh;
+  }
+
+  .snow-season-img-div {
+    padding: 2rem;
+  }
+
+  .snow-season-div h3 {
+    font-size: 2rem;
+  }
+
+  .snow-season-div button {
+    padding: 0.75rem 1.5rem;
+    font-size: 1rem;
+  }
+
+  /* Get Inspired Section */
+  .get-insipired-section h3 {
+    font-size: 2rem;
+  }
+}

@@ -1,0 +1,914 @@
+:root {
+    /* colors */
+    --space-dark-color: 230 35% 7%;
+    --space-blue-color: 231 77% 90%;
+    --space-white-color: 0 0% 100%;
+
+    /* font sizes */
+    --fs-900: clamp(5rem, 8vw + 1rem, 8.75rem);
+    --fs-800: 3.5rem;
+    --fs-700: 1.5rem;
+    --fs-600: 1rem;
+    --fs-500: 1rem;
+    --fs-400: 0.875rem;
+    --fs-300: 1rem;
+    --fs-200: 0.875rem;
+
+    /* font families */
+    --ff-serif: "Bellefair", serif;
+    --ff-sans-cond: "Barlow Condensed", sans-serif;
+    --ff-sans-normal: "Barlow", sans-serif;
+
+    /* Nav */
+    --nav-height: 100px;
+}
+
+/* -----------------------
+    Space Utlity classes
+   ----------------------- */
+
+/* General */
+.flex {
+    display: flex;
+    gap: var(--gap, 1em);
+}
+
+.grid {
+    display: grid;
+    gap: var(--gap, 1em);
+}
+
+.d-block {
+    display: block;
+}
+
+/* Grabs everything with a sibling above it (selects all except first child) */
+.flow > * + * {
+    margin-top: var(--flow-space, 1.3rem);
+}
+
+.flow--space-small {
+    --flow-space: .8rem;
+}
+
+.grid-container {
+    display: grid;
+    text-align: center;
+    place-items: center;
+    min-height: calc(100vh - var(--nav-height));
+    padding-inline: 1.3rem;
+}
+
+.grid-container p:not([class]) {
+    max-width: 50ch;
+}
+
+.container {
+    padding-inline: 2em;
+}
+
+.sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border: 0;
+}
+
+/* colors */
+.bg-dark {background-color: hsl(var(--space-dark-color));}
+.bg-accent {background-color: hsl(var(--space-blue-color));}
+.bg-white {background-color: hsl(var(--space-white-color));}
+
+.text-white { color: hsl(var(--space-white-color))}
+.text-dark {color: hsl(var(--space-dark-color))}
+.text-accent {color: hsl(var(--space-blue-color))}
+
+/* typography */
+.ff-serif { font-family: var(--ff-serif);}
+.ff-sans-cond { font-family: var(--ff-sans-cond);}
+.ff-sans-normal {font-family: var(--ff-sans-normal);}
+
+.letter-spacing-1 { letter-spacing: 4.75px;}
+.letter-spacing-2 { letter-spacing: 2.7px;}
+.letter-spacing-3 { letter-spacing: 2.35px;}
+
+.uppercase { text-transform: uppercase;}
+
+.fs-900 {font-size: var(--fs-900);}
+.fs-800 {font-size: var(--fs-800);}
+.fs-700 {font-size: var(--fs-700);}
+.fs-600 {font-size: var(--fs-600);}
+.fs-500 {font-size: var(--fs-500);}
+.fs-400 {font-size: var(--fs-400);}
+.fs-300 {font-size: var(--fs-300);}
+.fs-200 {font-size: var(--fs-200);}
+
+.fs-900,
+.fs-800,
+.fs-700,
+.fs-600 {
+    line-height: 1.1;
+}
+
+.numbered-title {
+    font-family: var(--ff-sans-cond);
+    font-size: var(--fs-500);
+    text-transform: uppercase;
+    letter-spacing: 4.72px;
+}
+
+.numbered-title span {
+    margin-right: .5em;
+    font-weight: 700;
+    color: hsl(var(--space-white-color) / .25);
+}
+
+/* -----------------------
+    Functional Components
+   ----------------------- */
+
+.large-button {
+    display: inline-grid;
+    font-size: 2rem;
+    z-index: 1;
+    place-items: center;
+    padding: 0 3em;
+    aspect-ratio: 1 / 1;
+    border-radius: 50%;
+    text-decoration: none;
+    position: relative;
+}
+
+.large-button::after {
+    content: '';
+    position: absolute;
+    background-color: hsl(var(--space-white-color) /.15);
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    z-index: -1;
+    opacity: 0;
+    transition: opacity 500ms linear, transform 750ms ease-in-out;
+}
+
+.large-button:hover::after,
+.large-button:focus::after {
+    opacity: 1;
+    transform: scale(1.5);
+}
+
+.tab-list {
+    --gap: 2rem;
+}
+
+.dot-indicators > * {
+    cursor: pointer;
+    border: 0;
+    border-radius: 50%;
+    aspect-ratio: 1;
+    padding: .8rem;
+    background-color: hsl(var(--space-white-color) / .25);
+}
+
+.dot-indicators > *:hover,
+.dot-indicators > *:focus {
+    background-color: hsl(var(--space-white-color) / .5);
+}
+
+.dot-indicators.active {
+    background-color: hsl(var(--space-white-color) / 1);
+}
+
+.small-button {
+    display: grid;
+    place-items: center;
+    padding: 0 1em;
+    aspect-ratio: 1 / 1;
+    border-radius: 50%;
+    text-decoration: none;
+    color: hsl(var(--space-white-color));
+    border: 1px solid hsl(var(--space-white-color) / .25)
+}
+
+.small-button:hover,
+.small-button:focus {
+    border: 1px solid hsl(var(--space-white-color) / .5)
+}
+
+.small-button.active {
+    background-color: hsl(var(--space-white-color) / 1);
+    border: 1px solid hsl(var(--space-white-color) / 1);
+    color: hsl(var(--space-dark-color));
+}
+
+.spaceOuter-div,
+.crewOuter-div,
+.destinationsOuter-div,
+.technologyOuter-div {
+    padding-top: 5vh;
+}
+
+/* ---------------------
+    space page body
+   --------------------- */
+
+.spaceOuter-div {
+    display: grid;
+    grid-template-rows: min-content 1fr;
+    width: 100%;
+    line-height: 1.5;
+    height: 100%;
+    background-color: hsl(var(--space-dark-color));
+    font-family: var(--ff-sans-normal);
+    font-size: var(--fs-400);
+    color: hsl(var(--space-white-color));
+    background-size: cover;
+    background-position: bottom center;
+}
+
+   .spaceOuter-div {
+       background-image: url(../space//SpaceAssets/home/background-home-mobile.jpg);
+   }
+
+/* ---------------------
+    Space Navigation
+   --------------------- */
+
+.underline-indicators > * {
+    text-decoration: none;
+    padding: var(--underline-gap, 1rem) 0;
+    border: 0;
+    cursor: pointer;
+    border-bottom: .15rem solid hsl(var(--space-white-color) / 0);
+}
+
+.underline-indicators > *:hover,
+.underline-indicators > *:focus {
+    border-color: hsl(var(--space-white-color) / .5);
+}
+
+.underline-indicators.active {
+    border-color: hsl(var(--space-white-color) / 1);
+}
+
+.spaceNav-link.active {
+    border-color: hsl(var(--space-white-color) / 1);
+}
+
+.spaceNav {
+    display: flex;
+    width: 100%;
+    height: var(--nav-height);
+    align-items: center;
+    justify-content: space-between;
+    align-items: center;
+    --gap: 4vw;
+}
+
+.spaceNav-link {
+    text-decoration: none;
+    font-size: var(--fs-400);
+}
+
+.spaceNav-link span {
+    font-weight: 700;
+    margin-right: .3125em;
+    font-size: var(--fs-400);
+}
+
+.space-navigation {
+    --underline-gap: 1rem;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    background-color: hsl(var(--space-dark-color) / 0.95);
+    justify-content: center;
+}
+
+@supports (backdrop-filter: blur(2rem)) {
+    .space-navigation {
+        background-color: hsl(var(--space-white-color) / 0.005);
+        backdrop-filter: blur(2rem);
+    }
+}
+
+.mobile-nav-toggle {
+    display: none;
+}
+
+.space-navigation[data-visible=true] {
+    transform: translateX(0%);
+}
+
+.logo {
+    margin-left: clamp(1rem, 4vw, 4rem);
+}
+
+/* mobile navigation */
+
+@media (max-width: 768px) {
+    .space-navigation {
+        --underline-gap: 0.5rem;
+        position: fixed;
+        z-index: 1000;
+        list-style: none;
+        inset: 0 0 0 30%;
+        padding: min(12.5rem, 15vh) 1.5rem;
+        margin: 0;
+        flex-direction: column;
+        gap: 1.25rem;
+        transform: translateX(100%);
+        transition: transform 500ms ease-in-out;
+        margin-top: -9.375rem;
+    }
+
+    .space-navigation.underline-indicators > * {
+        text-decoration: none;
+        border-bottom: 0rem solid hsl(var(--space-white-color) / 0);
+        padding: 0;
+    }
+
+    .space-navigation.underline-indicators > *:hover,
+    .space-navigation.underline-indicators > *:focus {
+        border-color: hsl(var(--space-white-color) / 0);
+    }
+
+    .spaceNav-link.active {
+        border-color: hsl(var(--space-white-color) / 0);
+    }
+
+    .mobile-nav-toggle {
+        display: block;
+        position: absolute;
+        z-index: 2000;
+        right: 1.25rem;
+        top: 5rem;
+        background: none;
+        border: 0;
+        background-image: url(../space/SpaceAssets/shared/icon-hamburger.svg);
+        background-position: center;
+        width: 1.25rem;
+        aspect-ratio: 1;
+        background-repeat: no-repeat;
+    }
+
+    .mobile-nav-toggle:hover,
+    .mobile-nav-toggle:focus {
+        cursor: pointer;
+    }
+
+    .mobile-nav-toggle[aria-expanded=true] {
+        background-image: url(../space/SpaceAssets/shared/icon-close.svg);
+    }
+}
+
+
+
+/* ---------------------
+    Space Home Page
+   --------------------- */
+
+   .grid-container h1,
+   .grid-container h3 {
+        font-weight: 400;
+   }
+
+
+/* ---------------------
+    Media Querey's
+   --------------------- */
+
+   @media (min-width: 769px) and (max-width: 60em) {
+
+    .spaceNav {
+        padding-left: 3.75rem;
+        padding-right: 1.25rem;
+    }
+
+    .space-navigation {
+        padding-inline: 1.875rem;
+    }
+
+        .spaceNav-link span {
+            display: none;
+        }
+
+        .logo {
+            margin-left: -1.875rem;
+        }
+   }
+
+  @media (min-width: 45em) {
+
+      :root {
+          /* font sizes */
+          --fs-800: 5rem;
+          --fs-700: 2.5rem;
+          --fs-600: 1.5rem;
+          --fs-500: 1.25rem;
+          --fs-400: 1rem;
+      }
+
+      .spaceOuter-div {
+          background-image: url(../space/SpaceAssets/home/background-home-tablet.jpg);
+      }
+  }
+
+   @media (min-width: 55.01em) {
+
+    /* ---------------------
+        Space Home Page
+        --------------------- */
+
+        :root {
+
+            /* font sizes */
+            --fs-800: 6.25rem;
+            --fs-700: 3.5rem;
+            --fs-600: 2rem;
+            --fs-500: 1.75rem;
+            --fs-400: 1.125rem;
+        }
+
+        .grid-container {
+            column-gap: var(--container-gap, 1.875rem);
+            grid-template-columns: minmax(2em, 1fr) minmax(0, 37.5rem) minmax(0, 37.5rem) minmax(2em, 1fr);
+            text-align: left;
+        }
+
+        .grid-container--home > *:first-child {
+            grid-column: 2;
+        }
+
+        .grid-container--home > *:last-child {
+            grid-column: 3;
+        }
+
+        .grid-container--home {
+            padding-bottom: max(4.375rem, 7vh);
+            align-items: end;
+        }
+
+        .spaceOuter-div {
+            background-image: url(../space/SpaceAssets/home/background-home-desktop.jpg);
+        }
+
+        .spaceNav {
+            padding-inline: 0.625rem;
+        }
+
+        .space-navigation {
+            padding-inline: 2.5rem;
+        }
+
+        .spaceNav-link {
+            min-width: fit-content;
+        }
+
+   }
+
+   @media (min-width: 60em) {
+
+    .space-navigation {
+        padding-inline: 5vw;
+    }
+
+    .spaceNav::after {
+        content: '';
+        display: block;
+        position: relative;
+        height: 1px;
+        width: 100%;
+        background: hsl(var(--space-white-color) / .25);
+        order: 1;
+        margin-left: 1.25rem;
+    }
+
+    .space-navigation {
+        order: 2;
+    }
+
+   }
+
+   @media (max-width: 55.01em) {
+
+        .grid-container--home > div h1 {
+           min-width: 100%;
+       }
+
+        .large-button {
+            font-size: 1.25rem;
+        }
+   }
+
+
+    /* ---------------------
+        Destinations Page !
+        --------------------- */
+
+        .destinationsOuter-div {
+            display: grid;
+            grid-template-rows: min-content 1fr;
+            width: 100%;
+            line-height: 1.5;
+            height: 100%;
+            background-image: url(../space/SpaceAssets/destination/background-destination-mobile.jpg);
+            background-color: hsl(var(--space-dark-color));
+            font-family: var(--ff-sans-normal);
+            font-size: var(--fs-400);
+            color: hsl(var(--space-white-color));
+            background-size: cover;
+            background-position: bottom center;
+            min-height: 100vh;
+        }
+
+        .destinations-info h3,
+        .destinations-info h2,
+        .destinations-info h1 {
+            font-weight: 400;
+        }
+
+        .destination-nav-div {
+            gap: 2rem;
+            align-self: start;
+        }
+
+        .grid-container--destination {
+            --flow-space: 2rem;
+            grid-template-areas: 
+                'title'
+                'image'
+                'tabs'
+                'content';
+        }
+
+        .numbered-title {
+            grid-area: title;
+        }
+
+        .grid-container--destination > img {
+            grid-area: image;
+            max-width: 60%;
+            align-self: start;
+        }
+
+        .grid-container--destination > .tab-list {
+            grid-area: tabs;
+        }
+
+        .grid-container--destination > .destinations-info {
+            grid-area: content;
+            padding-bottom: 2.5rem;
+        }
+
+        .destination-meta {
+            flex-direction: column;
+            border-top: 1px solid hsl( var(--space-white-color) / .1);
+            padding-top: 2.5rem;
+            margin-top: 2.5rem;
+        }
+
+        .destination-meta p {
+            font-size: 1.625rem;
+        }
+
+        .destinationBtn {
+            border: 1px solid transparent;
+            padding: 0;
+            margin-right: 10px;
+            padding-bottom: 0.5rem;
+            border-bottom: .125rem solid hsl(var(--space-white-color) / .0);
+            background: none;
+        }
+
+        .destinationBtn:hover,
+        .destinationBtn:focus {
+            border-bottom: .125rem solid hsl(var(--space-white-color) / .5);
+            cursor: pointer;
+        }
+
+        .destinationBtn[data-visible="Moon"]:first-child{
+            border-bottom: .125rem solid white;
+            color: white;
+        }
+
+        .destinationBtn[data-visible="Mars"]:nth-child(2) {
+            border-bottom: .125rem solid white;
+            color: white;
+        }
+
+        .destinationBtn[data-visible="Europa"]:nth-child(3) {
+            border-bottom: .125rem solid white;
+            color: white;
+        }
+
+        .destinationBtn[data-visible="Titan"]:nth-child(4) {
+            border-bottom: .125rem solid white;
+            color: white;
+        }
+
+        /* Destination page media querey */
+
+        @media (min-width: 45em) {
+            .numbered-title{
+                justify-self: start;
+                margin-top: 2rem;
+            }
+
+            .destination-meta {
+                flex-direction: row;
+                justify-content: space-evenly;
+            }
+
+            .destinationsOuter-div {
+                background-image: url(../space/SpaceAssets/destination/background-destination-tablet.jpg);
+            }
+        }
+
+        @media (min-width: 55.01em) {
+
+            .grid-container--destination {
+                justify-items: start;
+                align-content: start;
+                grid-template-areas:
+                    '. title title .'
+                    '. image tabs .'
+                    '. image content .'
+            }
+
+            .destination-meta {
+                --gap: min(3vw, 6.25rem);
+                justify-content: start;
+            }
+
+            .grid-container--destination > img {
+                min-width: 90%;
+            }
+
+            .destinationsOuter-div {
+                background-image: url(../space/SpaceAssets/destination/background-destination-desktop.jpg);
+            }
+
+        }
+
+        /* ---------------------
+            The Crew Page !
+            --------------------- */
+
+        .crewOuter-div {
+            display: grid;
+            grid-template-rows: min-content 1fr;
+            width: 100%;
+            line-height: 1.5;
+            height: 100%;
+            background-image: url(../space/SpaceAssets/crew/background-crew-mobile.jpg);
+            background-color: hsl(var(--space-dark-color));
+            font-family: var(--ff-sans-normal);
+            font-size: var(--fs-400);
+            color: hsl(var(--space-white-color));
+            background-size: cover;
+            background-position: bottom center;
+            min-height: 100vh;
+        }
+
+        .crewBtn[data-visible="Douglas"]:first-child {
+            background-color: white;
+        }
+
+        .crewBtn[data-visible="Mark"]:nth-child(2) {
+            background-color: white;
+        }
+
+        .crewBtn[data-visible="Victor"]:nth-child(3) {
+            background-color: white;
+        }
+
+        .crewBtn[data-visible="Ano"]:nth-child(4) {
+            background-color: white;
+        }
+
+        .crew-details h3,
+        .crew-details h2,
+        .crew-details h1 {
+            font-weight: 400;
+        }
+
+        .crew-details h2 {
+            color:hsl( var(--space-white-color) / .5);
+        }
+
+        .grid-container--crew {
+            --flow-space: 2rem;
+            grid-template-areas:
+                'title'
+                'image'
+                'tabs'
+                'content';
+        }
+
+        .numbered-title {
+            grid-area: title;
+        }
+
+        .grid-container--crew > img {
+            grid-area: image;
+            max-width: 90%;
+            border-bottom: 1px solid hsl( var(--space-white-color) / .1);
+        }
+
+        .grid-container--crew>.dot-indicators {
+            grid-area: tabs;
+        }
+
+        .grid-container--crew>.crew-details {
+            grid-area: content;
+            padding-bottom: 1.25rem;
+        }
+
+        /* The Crew page media querey */
+
+        @media (min-width: 45em) {
+            .crewOuter-div {
+                    background-image: url(../space/SpaceAssets/crew/background-crew-tablet.jpg);
+                }
+
+            .grid-container--crew {
+                grid-template-areas:
+                    'title'
+                    'content'
+                    'tabs'
+                    'image';
+            }
+
+        }
+
+        @media (min-width: 55.01em) {
+            .crewOuter-div {
+                background-image: url(../space/SpaceAssets/crew/background-crew-desktop.jpg);
+            }
+
+            .grid-container--crew {
+                grid-template-areas:
+                    '. title title .'
+                    '. content image .'
+                    '. tabs image .'
+            }
+
+            .grid-container--crew > .dot-indicators {
+                justify-self: start;
+                align-self: flex-start;
+            }
+
+            .grid-container--crew > img {
+                grid-column: span 2;
+                align-self: end;
+                max-width: 80%;
+            }
+
+        }
+
+        /* ---------------------
+            Technology Page !
+            --------------------- */
+
+            .technologyOuter-div {
+                background-image: url(../space/SpaceAssets/technology/background-technology-mobile.jpg);
+                display: grid;
+                grid-template-rows: min-content 1fr;
+                width: 100%;
+                line-height: 1.5;
+                height: 100%;
+                background-color: hsl(var(--space-dark-color));
+                font-family: var(--ff-sans-normal);
+                font-size: var(--fs-400);
+                color: hsl(var(--space-white-color));
+                background-size: cover;
+                background-position: bottom center;
+                min-height: 100vh;
+            }
+
+            .grid-container--technology {
+                --flow-space: 2rem;
+                grid-template-areas:
+                    'title'
+                    'image'
+                    'content'
+            }
+
+            .technology-details h3,
+            .technology-details h2,
+            .technology-details h1 {
+                font-weight: 400;
+            }
+
+            .numbered-title {
+                grid-area: title;
+            }
+
+            .numbered-nav {
+                padding-bottom: 1.875rem;
+            }
+
+            .grid-container--technology > img {
+                grid-area: image;
+                max-width: 90%;
+            }
+
+            .technology-details span {
+                font-size: 1rem;
+            }
+
+            .tech-content {
+                grid-area: content;
+                display: flex;
+                padding-bottom: 3.75em;
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .techBtn {
+                background-color: transparent;
+                color: white;
+                border: 2px solid hsl( var(--space-white-color) / .2);
+                width: 3.125rem;
+                height: 3.125rem;
+                border-radius: 50%;
+            }
+
+            .techBtn[data-visible="1"]:first-child {
+                background-color: white;
+                color: black;
+            }
+
+            .techBtn[data-visible="2"]:nth-child(2) {
+                background-color: white;
+                color: black;
+            }
+
+            .techBtn[data-visible="3"]:nth-child(3) {
+                background-color: white;
+                color: black;
+            }
+
+            .portraitImage {
+                display: none;
+            }
+
+            .landscapeImage {
+                display: block;
+                min-width: 90vw;
+            }
+
+            @media (min-width: 45em) {
+                .technologyOuter-div {
+                    background-image: url(../space/SpaceAssets/technology/background-technology-tablet.jpg);
+                }
+
+            }
+
+            @media (min-width: 60em) {
+                .technologyOuter-div {
+                    background-image: url(../space/SpaceAssets/technology/background-technology-desktop.jpg);
+                }
+
+                .portraitImage {
+                    display: block;
+                }
+
+                .landscapeImage {
+                    display: none;
+                }
+
+                .grid-container--technology {
+                    grid-template-columns: minmax(1.25em, 1fr) minmax(0, 37.5rem) minmax(0, 37.5rem);
+                    padding-right: 0px;
+                    grid-template-areas:
+                        '. title title'
+                        '. content image'
+                        '. content image'
+                }
+
+                .tech-content {
+                    gap: 2.5rem;
+                    flex-direction: row;
+                }
+
+                .numbered-nav {
+                    display: flex;
+                    flex-direction: column;
+                    padding-bottom: 0px;
+                }
+
+                .grid-container--technology > img {
+                    justify-self: end;
+                    max-width: 100%;
+                    max-height: 70%;
+                    align-self: self-start;
+                }
+
+            }

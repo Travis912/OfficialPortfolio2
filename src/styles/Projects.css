@@ -1,0 +1,157 @@
+:root {
+  --bento-spacing: 20px;
+}
+
+/* Exit button CSS here */
+
+.ribbon-box,
+.ribbon {
+  display: inline-block;
+  position: fixed;
+  left: 10px;
+  top: 0px;
+  z-index: 10000;
+}
+
+.ribbon-box {
+  box-shadow: 0px 0px 5px 3px rgba(0, 0, 0, 0.5);
+}
+
+.ribbon-box:hover {
+  cursor: pointer;
+}
+
+.ribbon-box .ribbon:after,
+.ribbon-box .ribbon:before {
+  content: "";
+  display: block;
+  position: absolute;
+  height: 40px;
+  bottom: -8px;
+  border: 30px solid rgba(255, 255, 255);
+}
+
+.ribbon-box .ribbon:before {
+  border-bottom-color: transparent;
+  bottom: -80px;
+}
+
+.ribbon-box-inside {
+  position: absolute;
+  color: black;
+  left: 10px;
+  top: 15px;
+  z-index: 99999999;
+  font-size: 1.1rem;
+  letter-spacing: 0.05rem;
+}
+
+.back-btn {
+  position: fixed;
+  left: 0px;
+  top: 0px;
+  width: fit-content;
+  width: 5dvw;
+  height: 20vh;
+  font-size: 1.2rem;
+  letter-spacing: 0.1rem;
+  z-index: 10000;
+  background: linear-gradient(rgb(0, 0, 0), rgb(255, 255, 255));
+  box-shadow: 0px 0px 5px 3px rgba(0, 0, 0, 0.5);
+  background-position: center;
+  background-size: cover;
+  color: white;
+  clip-path: 5px;
+}
+
+.projects-page {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100dvw;
+  height: 100vh;
+  padding-top: 7vh;
+}
+
+.bento-outer-container {
+  display: flex;
+  width: 100dvw;
+  height: 100%;
+}
+
+.upper-left-bento-section {
+  display: flex;
+  flex-direction: column;
+  width: 33%;
+  padding: var(--bento-spacing);
+  gap: var(--bento-spacing);
+}
+
+.bento-box {
+  background-color: black;
+  background-size: cover;
+  box-shadow: 0px 0px 5px 3px rgba(0, 0, 0, 0.5);
+}
+
+.bento-box:hover {
+  cursor: pointer;
+  box-shadow: 0px 0px 10px 5px rgba(0, 0, 0, 0.5);
+}
+
+.bb-starlink {
+  height: 60%;
+  width: 100%;
+  background-image: url(../assets/starlink.jpeg);
+  background-position: center;
+}
+
+.bb-me {
+  height: 40%;
+  width: 100%;
+  background-image: url(../assets/travis-hs.png);
+}
+
+.upper-right-bento-section {
+  display: flex;
+  flex-direction: column;
+  width: 67%;
+  padding: var(--bento-spacing) var(--bento-spacing) var(--bento-spacing) 0px;
+}
+
+.upper-right-inner-upper-section {
+  display: flex;
+  flex-direction: row;
+  height: 50%;
+  width: 100%;
+  gap: var(--bento-spacing);
+  padding-bottom: var(--bento-spacing);
+}
+
+.bb-banff {
+  height: 100%;
+  width: 50%;
+  background-image: url(../assets/banffLouise.jpeg);
+  background-position: center;
+}
+
+.bb-lambo {
+  display: flex;
+  height: 100%;
+  width: 100%;
+  flex-direction: column;
+  background-image: url(../assets/lamborghini.jpeg);
+}
+
+.upper-right-inner-lower-section {
+  display: flex;
+  flex-direction: row;
+  height: 50%;
+  width: 100%;
+  gap: var(--bento-spacing);
+}
+
+.bb-space2 {
+  height: 100%;
+  width: 45%;
+  background-image: url(../assets/spaceProject.png);
+}

@@ -1,0 +1,1079 @@
+/* ENTIRE PAGE */
+
+.lambo-page {
+  width: 100%;
+  max-width: 100%;
+  overflow-x: hidden;
+}
+
+/* NAVIGATION */
+
+.lambo-nav {
+  display: flex;
+  flex-direction: row;
+  background-color: #181818;
+  color: white;
+  position: fixed;
+  min-height: 12.75vh;
+  width: 100%;
+  z-index: 10;
+  padding-left: 5vw;
+}
+
+.lambo-nav-left-div {
+  display: flex;
+  flex-direction: row;
+  gap: 1.5rem;
+  padding-right: 8rem;
+  width: 100%;
+  padding-left: 100px;
+}
+
+.lambo-nav-ul {
+  display: flex;
+  flex-direction: column;
+  height: fit-content;
+  gap: 0.5rem;
+  min-width: 6rem;
+  max-width: 6rem;
+  margin-top: 2rem;
+  text-wrap: nowrap;
+}
+
+.lambo-nav-ul li {
+  cursor: pointer;
+  transition: color 0.3s ease;
+  width: fit-content;
+  padding: 0.5rem 0;
+}
+
+.lambo-nav-ul li:not(:first-of-type) {
+  display: none;
+  color: darkgray;
+  z-index: 0;
+}
+
+.lambo-nav-ul li:not(:first-of-type):hover {
+  color: rgb(255, 255, 255);
+}
+
+.ul-title-inactive:hover {
+  color: rgba(255, 255, 255, 0.5) !important;
+}
+
+.modelsNav,
+.beyondNav {
+  max-width: 4rem;
+  min-width: 4rem;
+}
+
+.ul-title:first-of-type {
+  position: relative;
+}
+
+.ul-title::after {
+  content: "";
+  display: block;
+  width: 100%;
+  height: 1px;
+  /* Adjust the height of the underline as needed */
+  background-color: grey;
+  position: absolute;
+  bottom: 1rem;
+  /* Adjust the position of the underline as needed */
+  left: 0;
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.3s ease-in-out;
+}
+
+.lambo-nav-ul li:first-of-type:hover::after {
+  transform: scaleX(1);
+  background-color: rgb(255, 255, 255);
+}
+
+.lambo-nav-ul .ul-title,
+.lambo-nav-ul .ul-title-inactive {
+  padding-bottom: 3vh;
+  padding-top: 3vh;
+}
+
+.lambo-nav-ul li:nth-of-type(2) {
+  padding-top: 2vh;
+}
+
+.lambo-nav-ul li:last-of-type {
+  padding-bottom: 5vh;
+}
+
+.models,
+.motorsport,
+.ownership {
+  display: block !important;
+}
+
+.closed:not(:first-of-type) {
+  display: none;
+}
+
+.lambo-nav-left-div img {
+  height: 69px;
+  position: fixed;
+  top: 1.8rem;
+  margin-left: -100px;
+}
+
+.lambo-nav-right-div {
+  display: flex;
+  width: 100%;
+  align-items: center;
+  height: fit-content;
+  margin-top: 2rem;
+  justify-content: end;
+  margin-right: 2rem;
+}
+
+.second-lambo-nav-links,
+.second-lambo-nav-links-closed {
+  display: flex;
+  gap: 1rem;
+  padding: 3vh 0;
+}
+
+.second-lambo-nav-links,
+.second-lambo-nav-links-closed a {
+  color: white;
+  position: relative;
+}
+
+.second-lambo-nav-links-closed a::after {
+  content: "";
+  display: block;
+  width: 100%;
+  height: 1px;
+  /* Adjust the height of the underline as needed */
+  background-color: grey;
+  position: absolute;
+  bottom: -0.5rem;
+  /* Adjust the position of the underline as needed */
+  left: 0;
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.3s ease-in-out;
+}
+
+.second-lambo-nav-links-closed a:hover::after {
+  transform: scaleX(1);
+  background-color: rgb(255, 255, 255);
+}
+
+.lambo-nav-icon-container {
+  display: flex;
+  gap: 1rem;
+  margin-left: 1rem;
+}
+
+.lambo-nav-icon-container i {
+  font-size: 1.6rem;
+}
+
+.lambo-nav-icon-container i:hover {
+  cursor: pointer;
+}
+
+.hamburger {
+  display: flex;
+  flex-direction: column;
+  z-index: 99;
+}
+
+.hamburger:hover {
+  cursor: pointer;
+}
+
+.bar {
+  width: 25px;
+  height: 3px;
+  background-color: white;
+  margin: 3px 0;
+  transition: 0.4s;
+}
+
+.mobile-menu,
+.mobile-menu-closed {
+  display: none;
+}
+
+.desktop-menu,
+.desktop-menu-closed {
+  display: flex;
+  position: absolute;
+  height: 100vh;
+  width: 100%;
+  background-color: #181818;
+  left: 0px;
+  top: -100vh;
+  padding: 20vh 5vw;
+  transition: top 0.5s ease-in-out;
+  flex-direction: column;
+}
+
+.desktop-menu {
+  top: 0px;
+}
+
+.desktop-menu-closed .desktop-menu-ul {
+  display: none;
+}
+
+.desktop-menu-div {
+  display: flex;
+  width: 100%;
+  justify-content: space-around;
+  font-size: 1.8rem;
+  z-index: 90;
+  height: fit-content;
+  position: relative;
+}
+
+.desktop-menu-div::after {
+  content: "";
+  display: block;
+  width: 100%;
+  height: 1px;
+  background-color: rgba(255, 255, 255, 0.3);
+  position: absolute;
+  z-index: 999;
+  bottom: -1rem;
+}
+
+.desktop-menu-ul {
+  display: flex;
+  flex-direction: column;
+  gap: 1.4rem;
+}
+
+.desktop-menu-ul li {
+  cursor: pointer;
+}
+
+.ul-title-inactive {
+  color: rgba(255, 255, 255, 0.5);
+}
+
+.ul-title-inactive:hover,
+.second-lambo-nav-links a:hover {
+  color: rgba(255, 255, 255, 0.5);
+  cursor: default;
+}
+
+.beyondNav li {
+  max-height: 3rem;
+  padding-bottom: 0px;
+  margin-bottom: 0px;
+}
+
+.second-lambo-nav-links a {
+  color: rgba(255, 255, 255, 0.5) !important;
+}
+
+.second-lambo-nav-links-closed a {
+  z-index: 99;
+}
+
+.lambo-nav-ul li:hover {
+  color: white;
+}
+
+.lambo-desktop-lower-div {
+  display: flex;
+  justify-content: space-between;
+  height: 40vh;
+  font-size: 1.4rem;
+  padding: 3rem 5rem;
+}
+
+.desktop-lower-div-closed {
+  display: none;
+}
+
+.lambo-desktop-lower-div div:first-of-type ul li:first-of-type {
+  color: rgba(255, 255, 255, 0.5);
+}
+
+.lambo-desktop-lower-div div h3,
+.lambo-desktop-lower-div div ul li {
+  text-transform: uppercase;
+}
+
+.lambo-desktop-lower-div div h3 {
+  font-size: 1.2rem;
+  color: rgba(255, 255, 255, 0.5);
+  font-weight: 400;
+  margin-bottom: 1rem;
+}
+
+.lambo-desktop-lower-div div ul {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  max-height: 100%;
+}
+
+.lambo-desktop-lower-div div ul li {
+  padding: 1rem;
+}
+
+/* HEADER */
+
+.lambo-header {
+  width: 100%;
+  max-width: 100%;
+  overflow-x: hidden;
+  height: 100vh;
+  background: url(./lambo-header-desktop.webp);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 100%;
+  display: flex;
+  padding-left: 8dvw;
+  justify-content: center;
+  flex-direction: column;
+  position: relative;
+}
+
+.lambo-header h1 {
+  font-size: 2rem;
+  color: white;
+  font-weight: 400;
+}
+
+.lambo-header h1 span {
+  font-size: 6.5rem;
+  letter-spacing: -5px;
+  font-weight: 600;
+}
+
+.lambo-header-btn-div {
+  display: flex;
+  gap: 10px;
+  color: white;
+  position: absolute;
+  right: 12dvw;
+  bottom: 7vh;
+  font-size: 1.2rem;
+}
+
+.hexagon-btn {
+  width: 65px;
+  height: 65px;
+  background: url(./hexagon-background.jpeg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  color: white;
+  -webkit-clip-path: polygon(
+    25% 5%,
+    75% 5%,
+    100% 50%,
+    75% 95%,
+    25% 95%,
+    0% 50%
+  );
+  clip-path: polygon(25% 5%, 75% 5%, 100% 50%, 75% 95%, 25% 95%, 0% 50%);
+  display: flex;
+}
+
+.hexagon-btn span {
+  transform: scale(1.1, 2.2);
+  position: absolute;
+  right: 43%;
+  top: 40%;
+}
+
+.hexagon-btn:hover {
+  cursor: pointer !important;
+  background-color: white !important;
+  background-image: none;
+  color: black !important;
+}
+
+.hexagon-text-div {
+  font-size: 3rem;
+  margin-left: 1vw;
+}
+
+.hexagon-text-div p:first-child {
+  font-size: 1rem;
+  font-weight: bold;
+}
+
+.hexagon-btn-background {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 69px;
+  height: 69px;
+  background-color: rgb(255, 255, 255);
+  -webkit-clip-path: polygon(
+    25% 5%,
+    75% 5%,
+    100% 50%,
+    75% 95%,
+    25% 95%,
+    0% 50%
+  );
+  clip-path: polygon(25% 5%, 75% 5%, 100% 50%, 75% 95%, 25% 95%, 0% 50%);
+  transform: rotate(90deg);
+}
+
+/* BODY */
+
+.lambo-main {
+  width: 100%;
+  max-width: 100dvw;
+  margin-left: -1.2dvw;
+}
+
+.model-section {
+  display: flex;
+  flex-direction: column;
+  margin-top: 7vh;
+  padding-left: 5dvw;
+  padding-right: 5dvw;
+  width: 100dvw;
+  font-weight: 100;
+  font-size: 1rem;
+  line-height: 1.7;
+  color: rgb(57, 57, 57);
+}
+
+.model-section-img {
+  width: 100%;
+}
+
+.revuelto-img2 {
+  display: none;
+}
+
+.urus2 {
+  display: none;
+}
+
+.concept-img2 {
+  display: none;
+}
+
+.model-title-img,
+.model-section h1 {
+  max-width: 100%;
+  margin-bottom: 5dvw;
+  margin-top: 5dvw;
+  font-size: 1.7rem;
+}
+
+.lmabo-model-btn {
+  border: 1px solid rgba(153, 153, 153, 0.489);
+  width: 100%;
+  font-weight: 600;
+  padding: 15px 0px;
+  margin-top: 15px;
+  font-size: 1rem;
+}
+
+.lambo-room-div,
+.lambo-dealer-div {
+  width: 100%;
+  height: 27vh;
+  background-size: cover;
+  background-position: center;
+  background-color: black;
+  color: white;
+  display: relative;
+  max-width: 100dvw;
+  overflow-y: hidden;
+}
+
+.lambo-dealer-div {
+  background-image: url(./lambo-dealership.webp);
+  margin-top: 5vh;
+}
+
+.lambo-room-div {
+  background-image: url(./lambo-room.webp);
+}
+
+.lambo-room-div h3,
+.lambo-dealer-div h3 {
+  font-size: 3rem;
+  position: absolute;
+  bottom: 1.5rem;
+}
+
+.lambo-room-div h6,
+.lambo-dealer-div h6 {
+  font-size: 1.4rem;
+  position: absolute;
+  bottom: 5rem;
+}
+
+.lambo-dealer-text-div,
+.lambo-room-text-div {
+  position: relative;
+  padding: 5dvw;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.lambo-room-div:hover,
+.lambo-dealer-div:hover {
+  cursor: pointer;
+}
+
+/* FOOTER */
+
+.lambo-footer {
+  background-color: rgb(32, 32, 32);
+  color: white;
+  padding: 5dvw;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  max-width: 100dvw;
+}
+
+.lambo-footer-ul-div {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 5dvw;
+}
+
+.lambo-footer-ul-one,
+.lambo-footer-ul-two {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.lambo-footer-ul-one li,
+.lambo-footer-ul-two li {
+  position: relative;
+  width: fit-content;
+}
+
+.lambo-footer-ul-one li:hover,
+.lambo-footer-ul-two li:hover {
+  cursor: pointer;
+}
+
+.lambo-footer-ul-one li::after,
+.lambo-footer-ul-two li::after {
+  content: "";
+  display: block;
+  width: 100%;
+  height: 1px;
+  /* Adjust the height of the underline as needed */
+  background-color: white;
+  position: absolute;
+  bottom: -5px;
+  /* Adjust the position of the underline as needed */
+  left: 0;
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.3s ease-in-out;
+}
+
+.lambo-footer-ul-one li:hover::after,
+.lambo-footer-ul-two li:hover::after {
+  transform: scaleX(1);
+}
+
+.lambo-footer-text-div {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  line-height: 1.5rem;
+}
+
+.lambo-footer-smaller-text {
+  font-size: 0.8rem;
+}
+
+.lambo-dumb-text {
+  position: fixed;
+  bottom: 0;
+  color: white;
+  background-color: rgba(0, 0, 0, 0.9);
+  font-size: 0.8rem;
+  padding: 0.5rem;
+  line-height: 1.2rem;
+  text-align: center;
+  max-width: 100dvw;
+  width: 100%;
+}
+
+/* Desktop screen size only below */
+
+@media screen and (min-width: 1264px) {
+  /* Header */
+
+  #lambo-model-text {
+    position: relative;
+    animation: slideInFromLeft 1s ease-out forwards;
+    opacity: 0;
+  }
+
+  @keyframes slideInFromLeft {
+    0% {
+      transform: translateX(-100%);
+      opacity: 0;
+    }
+
+    100% {
+      transform: translateX(0);
+      opacity: 1;
+    }
+  }
+
+  /* body */
+
+  .lambo-main {
+    display: flex;
+    flex-direction: column;
+    gap: 5vh;
+    margin: 0px;
+  }
+
+  .model-title-img {
+    width: 70%;
+    margin-top: 2dvw;
+    margin-bottom: 1dvw;
+  }
+
+  .model-section {
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    margin: 0px;
+    padding: 0px;
+    gap: 0px;
+    height: 100vh;
+  }
+
+  .model-section-text-div {
+    width: 40%;
+    padding: 0px;
+    margin: 0px;
+    display: flex;
+    flex-direction: column;
+    display: flex;
+    padding-right: 7dvw;
+    margin-left: 7dvw;
+    justify-content: center;
+    font-size: 1.2rem;
+  }
+
+  .model-section-text-div:first-of-type {
+    width: 30%;
+  }
+
+  .model-section-img {
+    position: absolute;
+    width: 60%;
+    z-index: -1;
+    max-height: 100vh;
+  }
+
+  .temerario-section {
+    flex-direction: row-reverse;
+    margin-top: 10vh;
+  }
+
+  .urus-section {
+    flex-direction: row-reverse;
+  }
+
+  .limited-series-section {
+    flex-direction: column-reverse;
+  }
+
+  .concept-section {
+    flex-direction: column-reverse;
+  }
+
+  .concept-img-div {
+    display: flex;
+    flex-direction: row-reverse;
+    max-width: 100%;
+    position: relative;
+    height: 80vh;
+  }
+
+  .concept-img {
+    width: 40%;
+    -webkit-clip-path: polygon(30% 0, 100% 0, 70% 100%, 0% 100%);
+    clip-path: polygon(36% 0, 100% 0, 70% 100%, 0% 100%);
+    position: absolute;
+    right: -50px;
+    bottom: 50px;
+  }
+
+  .concept-img2 {
+    display: block;
+    -webkit-clip-path: polygon(30% 0, 100% 0, 70% 100%, 0% 100%);
+    clip-path: polygon(30% 0, 100% 0, 70% 100%, 0% 100%);
+    width: 50%;
+    position: absolute;
+    left: -75px;
+    bottom: 0px;
+  }
+
+  .temerario-img {
+    -webkit-clip-path: polygon(0 0, 100% 0, 60% 100%, 0% 100%);
+    clip-path: polygon(0 0, 100% 0, 60% 100%, 0% 100%);
+    left: -30%;
+    bottom: 0px;
+    height: 100%;
+    width: 100%;
+  }
+
+  .revuelto-img {
+    right: -30%;
+    height: 45%;
+  }
+
+  .revuelto-img,
+  .urus-img,
+  .limited-series-img {
+    width: 70%;
+    -webkit-clip-path: polygon(30% 0, 100% 0, 70% 100%, 0% 100%);
+    clip-path: polygon(30% 0, 100% 0, 70% 100%, 0% 100%);
+  }
+
+  .revuelto-img2 {
+    display: block;
+    -webkit-clip-path: polygon(30% 0, 100% 0, 70% 100%, 0% 100%);
+    clip-path: polygon(30% 0, 100% 0, 70% 100%, 0% 100%);
+    right: 0;
+    bottom: 0;
+    height: 50%;
+  }
+
+  .urus-img {
+    left: -15%;
+    top: 0px;
+    height: 60%;
+  }
+
+  .urus2 {
+    display: block;
+    -webkit-clip-path: polygon(30% 0, 100% 0, 70% 100%, 0% 100%);
+    clip-path: polygon(30% 0, 100% 0, 70% 100%, 0% 100%);
+    height: 40%;
+    bottom: 0px;
+    left: -25%;
+  }
+
+  .huracan-img {
+    -webkit-clip-path: polygon(40% 0, 100% 0, 100% 100%, 0% 100%);
+    clip-path: polygon(40% 0, 100% 0, 100% 100%, 0% 100%);
+    right: 0px;
+    height: 100%;
+    width: 100%;
+    right: -30%;
+  }
+
+  .huracan-section {
+    margin-bottom: 10vh;
+  }
+
+  .limited-series-section {
+    position: relative;
+    padding-top: 0px;
+    height: 115vh;
+  }
+
+  .limited-series-img2 {
+    position: absolute;
+    left: -15%;
+    bottom: -20%;
+    width: 60%;
+    -webkit-clip-path: polygon(30% 0, 100% 0, 70% 100%, 0% 100%);
+    clip-path: polygon(30% 0, 100% 0, 70% 100%, 0% 100%);
+  }
+
+  .limited-series-img {
+    position: absolute;
+    right: -5%;
+    bottom: 0px;
+  }
+
+  .limited-series-text-div {
+    display: flex;
+    justify-content: start;
+    height: 100%;
+  }
+
+  .limited-series-text-div h1 {
+    margin: 0px;
+    padding: 0px;
+    line-height: 5rem;
+    font-size: 2rem;
+    color: black;
+  }
+
+  .concept-section {
+    position: relative;
+    height: 150vh;
+  }
+
+  .concept-text-div {
+    margin: 0 auto;
+    padding-left: 5dvw;
+  }
+
+  .concept-img {
+    position: absolute;
+    right: -5%;
+    bottom: 15%;
+    width: 65%;
+  }
+
+  .concept-img2 {
+    position: absolute;
+    left: -15vw;
+    bottom: 0px;
+    width: 70vw;
+  }
+
+  .lmabo-model-btn {
+    border: none;
+    position: relative;
+    width: 50%;
+    align-items: start;
+    display: flex;
+    padding-left: 1rem;
+  }
+
+  .lmabo-model-btn::after {
+    content: "";
+    display: block;
+    width: 100%;
+    height: 1px;
+    /* Adjust the height of the underline as needed */
+    background-color: grey;
+    position: absolute;
+    bottom: -0px;
+    /* Adjust the position of the underline as needed */
+    left: 0;
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform 0.3s ease-in-out;
+  }
+
+  .lmabo-model-btn:hover::after {
+    transform: scaleX(1);
+    background-color: black;
+  }
+
+  .lambo-dealer-and-room-section {
+    display: flex;
+    flex-direction: row;
+  }
+
+  .lambo-room-div,
+  .lambo-dealer-div {
+    width: 50%;
+    height: 70vh;
+    margin: 0px;
+  }
+
+  .lambo-room-text-div h6,
+  .lambo-dealer-text-div h6 {
+    font-size: 2rem;
+    bottom: 6.5rem;
+  }
+
+  .lambo-room-text-div h3,
+  .lambo-dealer-text-div h3 {
+    font-size: 4rem;
+  }
+
+  .lambo-dumb-text p {
+    font-size: 1rem;
+  }
+
+  .lambo-dumb-text {
+    z-index: 1;
+  }
+
+  /* Desktop Footer */
+
+  .lambo-footer-ul-one,
+  .lambo-footer-ul-two {
+    flex-direction: row;
+    gap: 2rem;
+  }
+
+  .lambo-footer-ul-div {
+    flex-direction: column;
+    padding: 1dvw;
+    gap: 1dvw;
+    font-size: 1.1rem;
+  }
+
+  .lambo-footer-text-div p {
+    font-size: 1rem;
+    margin-top: 1rem;
+  }
+
+  .lambo-nav {
+    display: fixed;
+  }
+
+  .lambo-nav-ul li,
+  .second-lambo-nav-links,
+  .lambo-nav-icon-container,
+  .lambo-nav-left-div img {
+    z-index: 99;
+  }
+}
+
+/* Desktop only above */
+
+/* Mobile screen size below */
+
+@media screen and (max-width: 1264px) {
+  /* NAV */
+
+  .desktop-menu,
+  .desktop-menu-closed {
+    display: none;
+  }
+
+  .lambo-nav {
+    min-height: 10vh;
+    display: flex;
+    align-items: center;
+    position: relative;
+  }
+
+  .lambo-nav-left-div {
+    height: 8vh;
+    padding-right: 0px;
+    padding-left: 50px;
+  }
+
+  .lambo-nav img {
+    position: static;
+    height: 100%;
+    width: 100px;
+    max-width: 100px;
+    margin: 0px;
+  }
+
+  .mobile-menu,
+  .mobile-menu-closed {
+    display: flex;
+    padding-top: 20vh;
+    position: absolute;
+    left: 0px;
+    width: 100%;
+    background-color: #181818;
+    z-index: -1;
+    min-height: 150vh;
+    transition: bottom 0.5s ease-in-out;
+    padding-left: 5vw;
+  }
+
+  .mobile-menu-closed {
+    bottom: 10vh;
+  }
+
+  .mobile-menu {
+    bottom: -150vh;
+  }
+
+  .mobile-menu ul,
+  .mobile-menu-closed ul {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    padding: 1rem;
+    font-size: 1.5rem;
+  }
+
+  .mobile-menu ul {
+    opacity: 1;
+    transition: opacity 0.4s ease-in 0.2s;
+  }
+
+  .mobile-menu-closed ul {
+    opacity: 0;
+    transition: opacity 0.2s ease-in;
+  }
+
+  .mobile-menu ul li:hover {
+    cursor: pointer;
+  }
+
+  .lambo-nav-ul {
+    display: none;
+  }
+
+  .lambo-nav-links a {
+    display: none;
+  }
+
+  .lambo-nav-right-div {
+    margin-top: 5px;
+  }
+
+  .lambo-nav-icon-container {
+    gap: 1.8rem;
+  }
+
+  .lambo-nav-icon-container i {
+    font-size: 2rem;
+  }
+
+  /* HEADER */
+
+  .lambo-header {
+    background: url(./lambo-header-mobile.webp);
+    background-position: center;
+    background-size: cover;
+    width: 100dvw;
+    justify-content: start;
+    padding-top: 15vh;
+  }
+
+  .lambo-header h1 {
+    font-size: 2rem;
+    color: white;
+    font-weight: 400;
+  }
+
+  .lambo-header h1 span {
+    font-size: 4rem;
+    letter-spacing: 0px;
+    font-weight: 600;
+  }
+
+  .lambo-header-btn-div {
+    display: none;
+  }
+
+  .limited-series-img2 {
+    display: none;
+  }
+}
+
+/* tablet screen size below */
+
+@media screen and (max-width: 1024px) {
+  .second-lambo-nav-links {
+    display: none !important;
+  }
+}
