@@ -1,7 +1,7 @@
 
 import { useState, useEffect, useCallback } from 'react';
 import PropTypes from 'prop-types';
-import '../styles/carousel.css';
+import '../styles/Carousel.css';
 
 /* Carousel component that displays a series of images in a sliding carousel format. */
 

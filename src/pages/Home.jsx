@@ -18,7 +18,7 @@ const Home = () => {
                             <h4>Hello</h4>
                             <h1>I&apos;m <span>Travis</span></h1>
                             <h1>Front-End Engineer</h1>
-                            <a href="/contact" className="contact-button">Contact Me</a>
+                            <a href="/#/contact" className="contact-button">Contact Me</a>
                         </div>
                     </div>
                     <div className='home-header-img'>
@@ -81,9 +81,9 @@ const Home = () => {
 
             <section className="home-projects">
                 <Carousel images={[
-                    {image: LamborghiniImg, link: '/lamborghini'},
-                    {image: starlink, link: '/starlink'},
-                    {image: banffImg, link: '/banff'},
+                    {image: LamborghiniImg, link: '/#/lamborghini'},
+                    {image: starlink, link: '/#/starlink'},
+                    {image: banffImg, link: '/#/banff'},
                     ]}></Carousel>
             </section>
         </div>
