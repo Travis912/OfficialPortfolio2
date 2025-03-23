@@ -17,7 +17,7 @@ import OutdoorOne from "./outdoorOne.jpg";
 import OutdoorTwo from "./outdoorTwo.jpg";
 import OutdoorThree from "./outdoorThree.jpg";
 import OutdoorFour from "./outdoorFour.jpg";
-import OutdoorFive from "./outdoorFive.jpg";
+import OutdoorFive from "./OutdoorFive.jpg";
 import OutdoorSix from "./outdoorSix.jpg";
 import OutdoorSeven from "./outdoorSeven.jpg";
 import OutdoorEight from "./outdoorEight.jpg";
@@ -27,7 +27,7 @@ import EatOne from "./eatOne.jpg";
 import EatTwo from "./eatTwo.jpg";
 import EatThree from "./eatThree.jpg";
 import EatFour from "./eatFour.jpg";
-import EatFive from "./eatFive.jpg";
+import EatFive from "./EatFive.jpg";
 import EatSix from "./eatSix.jpg";
 
 /* Wellness images */
