@@ -2,6 +2,11 @@
   --banff-side-padding: 4.5vw;
 }
 
+.banff-entire-page {
+  width: 100%;
+  overflow-x: hidden;
+}
+
 .react-multiple-carousel__arrow--right,
 .react-multiple-carousel__arrow--left {
   background-color: red;

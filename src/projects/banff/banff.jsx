@@ -197,7 +197,7 @@ export default function Banff() {
     }, [headerNumber, season, isPaused]);
 
     return (
-        <>
+        <div className='banff-entire-page'>
 
             <BanffNav></BanffNav>
 
@@ -468,6 +468,6 @@ export default function Banff() {
                 </footer>
             </main>
 
-        </>
+        </div>
     );
 };

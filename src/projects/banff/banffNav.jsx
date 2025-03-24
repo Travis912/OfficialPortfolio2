@@ -1,4 +1,5 @@
 import { useState, useEffect } from 'react';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import banffLogo from './banffLogo-new.png';
 import BanffNavDropdown from './banffNavDropdown';
 
@@ -72,7 +73,8 @@ export default function BanffNav() {
                 <div className='banff-lower-nav-div' aria-expanded={isMenuOpen}>
 
                     <div className="banff-hamburger-icon" onClick={toggleMenu}>
-                        <i className={isMenuOpen ? "fas fa-times" : "fas fa-bars"}></i>
+                        <FontAwesomeIcon icon={isMenuOpen ? "fa-solid fa-x" : "fas fa-bars"} />
+                        <i className={isMenuOpen ? "fa-solid fa-x" : "fas fa-bars"}></i>
                     </div>
                     <BanffNavDropdown className="BanffNavDropdown-mobile" mobileMenuOpen={isMenuOpen}/>
 
@@ -82,7 +84,7 @@ export default function BanffNav() {
                         <ul className="banff-nav-links">
 
                             <li  aria-expanded={isDropdownOpen} className='banff-ATP-nav'>
-                                <a href="#" onClick={toggleATPDropdown}>About This place  <i className={isDropdownOpen && dropdownContent === 'ATP' ? "fas fa-chevron-up" : "fas fa-chevron-down"}></i></a>
+                                <a onClick={toggleATPDropdown}>About This place  <i className={isDropdownOpen && dropdownContent === 'ATP' ? "fas fa-chevron-up" : "fas fa-chevron-down"}></i></a>
                                 <div className="banff-dropdown-div">
                                     <div className='banff-dropdown-content'>
                                        <BanffNavDropdown dropdownContent={dropdownContent} mobileMenuOpen={isMenuOpen}/>
@@ -91,7 +93,7 @@ export default function BanffNav() {
                             </li>
 
                             <li aria-expanded={isDropdownOpen} className='banff-VI-nav'>
-                                <a href="#" onClick={toggleVIDropdown}>Visitor Info <i className={isDropdownOpen && dropdownContent === 'VI' ? "fas fa-chevron-up" : "fas fa-chevron-down"}></i></a>
+                                <a onClick={toggleVIDropdown}>Visitor Info <i className={isDropdownOpen && dropdownContent === 'VI' ? "fas fa-chevron-up" : "fas fa-chevron-down"}></i></a>
                                 <div className="banff-dropdown-div">
                                     <div className='banff-dropdown-content'>
                                         <BanffNavDropdown dropdownContent={dropdownContent} mobileMenuOpen={isMenuOpen}/>
@@ -100,7 +102,7 @@ export default function BanffNav() {
                             </li>
 
                             <li aria-expanded={isDropdownOpen} className='banff-TTD-nav'>
-                                <a href="#" onClick={toggleTTDropdown}>Things To Do <i className={isDropdownOpen && dropdownContent === 'TTD' ? "fas fa-chevron-up" : "fas fa-chevron-down"}></i></a>
+                                <a onClick={toggleTTDropdown}>Things To Do <i className={isDropdownOpen && dropdownContent === 'TTD' ? "fas fa-chevron-up" : "fas fa-chevron-down"}></i></a>
                                 <div className="banff-dropdown-div">
                                     <div className='banff-dropdown-content'>
                                         <BanffNavDropdown dropdownContent={dropdownContent} mobileMenuOpen={isMenuOpen}/>
@@ -108,8 +110,8 @@ export default function BanffNav() {
                                 </div>
                             </li>
 
-                            <li><a href="#">Where To Stay</a></li>
-                            <li><a href="#">Trip Ideas</a></li>
+                            <li><a>Where To Stay</a></li>
+                            <li><a>Trip Ideas</a></li>
                         </ul>
                         <div className="banff-nav-icons">
                             <i className="fas fa-search"></i>
