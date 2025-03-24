@@ -6,6 +6,16 @@ import LamborghiniImg from '../assets/lamborghini.jpeg';
 import banffImg from '../assets/banffLouise.jpeg';
 import starlink from '../assets/starlink.jpeg';
 
+/* Expertise Logo's */
+import html from '../assets/html.png';
+import css from '../assets/css.png';
+import javascript from '../assets/javascript.png';
+import react from '../assets/react.png';
+import redux from '../assets/redux.png';
+import typescript from '../assets/typescript.png';
+import github from '../assets/github.png';
+import vscode from '../assets/vscode.png';
+import responsive from '../assets/responsivedesign.png';
 
 const Home = () => {
 
@@ -57,15 +67,18 @@ return () => {
                 <section className="home-expertise">
                     <h2>My Expertise:</h2>
                     <ul className='expertise-list'>
-                        <li>React</li>
-                        <li>JavaScript</li>
-                        <li>HTML</li>
-                        <li>CSS</li>
-                        <li>TypeScript</li>
-                        <li>Redux</li>
-                        <li>Git-Hub</li>
-                        <li>VScode</li>
-                        <li>Responsive Designs</li>
+                        <li><img className='expertise-logos' src={react} alt='React'></img></li>
+                        <li><img className='expertise-logos' src={javascript} alt='JavaScript'></img></li>
+                        <li><img className='expertise-logos' src={html} alt='HTML'></img></li>
+                        <li><img className='expertise-logos' src={css} alt='CSS'></img></li>
+                        <li><img className='expertise-logos' src={typescript} alt='TypeScript'></img></li>
+                        <li><img className='expertise-logos' src={redux} alt='Redux'></img></li>
+                        <li><img className='expertise-logos' src={github} alt='Git-hub'></img></li>
+                        <li><img className='expertise-logos' src={vscode} alt='Visual Studio Code'></img></li>
+                        <div className='responsive-design'>
+                            <img src={responsive} alt='Responsive Designs'></img>
+                            <p>Responisve Designs</p>
+                        </div>
                     </ul>
                 </section>
 
