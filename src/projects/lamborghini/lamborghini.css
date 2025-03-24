@@ -1038,6 +1038,10 @@
     font-size: 2rem;
   }
 
+  .second-lambo-nav-links-closed {
+    display: none;
+  }
+
   /* HEADER */
 
   .lambo-header {
