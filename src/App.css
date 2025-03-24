@@ -1,32 +1,32 @@
 /* Color scheme */
 
 :root {
-    --primary-color: #000000;
-    --accent-color: #ff9913;
-    --background-color: #ffffff;
-    --text-color: black;
+  --primary-color: #000000;
+  --accent-color: #ff9913;
+  --background-color: #ffffff;
+  --text-color: black;
 
-    --content-width: 1000px;
-    --light-orange: #FFC594;
-    --dark-orange-one: #ED9121;
-    --dark-orange-two: #E66c2c;
-    --orange-one: #FA8128;
-    --orange-two: #e47200;
-    --orange-three: #ff781f;
-    --orange-four: #ff9913;
-    --bright-orange: #FF8400;
+  --content-width: 1200px;
+  --light-orange: #ffc594;
+  --dark-orange-one: #ed9121;
+  --dark-orange-two: #e66c2c;
+  --orange-one: #fa8128;
+  --orange-two: #e47200;
+  --orange-three: #ff781f;
+  --orange-four: #ff9913;
+  --bright-orange: #ff8400;
 
-    --bright-yellow: #fc3;
-    --light-yellow: #fef6e7;
-    --yellow-one: #e6b400;
-    --yellow-two: #e6cc00;
-    --yellow-three: #f1ee8e;
+  --bright-yellow: #fc3;
+  --light-yellow: #fef6e7;
+  --yellow-one: #e6b400;
+  --yellow-two: #e6cc00;
+  --yellow-three: #f1ee8e;
 
-    --bright-green: #00af89;
+  --bright-green: #00af89;
 
-    --bright-blue: #36c;
+  --bright-blue: #36c;
 
-    --bright-red: #d33;
+  --bright-red: #d33;
 }
 
 /*
@@ -34,10 +34,10 @@
 */
 
 body {
-    color: var(--text-color);
-    font-family: Arial, sans-serif;
+  color: var(--text-color);
+  font-family: Arial, sans-serif;
 }
 
 a {
-    color: var(--primary-color);
+  color: var(--primary-color);
 }

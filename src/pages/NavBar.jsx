@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { NavLink } from "react-router-dom";
 import "../styles/NavBar.css";
 
@@ -9,8 +9,29 @@ const NavBar = () => {
     setIsOpen(!isOpen);
   };
 
+  const [opacity, setOpacity] = useState(1);
+
+  useEffect(() => {
+  const handleScroll = () => {
+      const scrollPosition = window.scrollY;
+      const screenHeight = window.innerHeight;
+
+      if (scrollPosition > screenHeight / 1.3) {
+      setOpacity(0);
+      } else {
+      setOpacity(1);
+      }
+  };
+
+  window.addEventListener('scroll', handleScroll);
+
+  return () => {
+      window.removeEventListener('scroll', handleScroll);
+  };
+  }, []);
+
   return (
-    <nav className="navbar">
+    <nav className="navbar" style={{ opacity: opacity }}>
       <div className='nav-content'>
         <div className={`navbar-links ${isOpen ? "open" : ""}`}>
           <NavLink to="/" onClick={toggleMenu} className={({ isActive }) => isActive ? "active" : ""}>Home</NavLink>

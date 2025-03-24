@@ -4,20 +4,14 @@
 
 .navbar {
   display: flex;
-  position: absolute;
+  position: fixed;
   justify-content: center;
   align-items: end;
   top: 0;
   width: 100dvw;
-  z-index: 100000;
+  z-index: 3;
   height: 7vh;
 }
-
-/*
-    position: fixed;
-    background-color: rgba(0, 0, 0, 0.7);
-    backdrop-filter: blur(10px);
-*/
 
 .nav-content {
   display: flex;
@@ -42,10 +36,10 @@
 }
 
 .navbar-links a {
-  color: black;
+  color: white;
   text-decoration: none;
   font-size: 1.1rem;
-  z-index: 10000;
+  z-index: 1;
   letter-spacing: 0.1rem;
 }
 
@@ -63,7 +57,7 @@
 }
 
 .navbar-links a.active {
-  box-shadow: 0 0.5px 0 black;
+  box-shadow: 0 0.5px 0 white;
 }
 
 @media (max-width: 768px) {
