@@ -1,5 +1,5 @@
 :root {
-  --nav-height: 7vh;
+  --nav-height: 7dvh;
 }
 
 .navbar {
@@ -10,7 +10,7 @@
   top: 0;
   width: 100dvw;
   z-index: 3;
-  height: 7vh;
+  height: 7dvh;
 }
 
 .nav-content {
@@ -74,7 +74,7 @@
     flex-direction: column;
     width: 100%;
     position: absolute;
-    top: -100vh;
+    top: -100dvh;
     height: 100dvh;
     left: 0px;
     background-color: rgba(0, 0, 0, 0.85);
@@ -82,7 +82,7 @@
     text-align: center;
     margin-left: 0px;
     margin-top: 0px;
-    padding: 2vh 0;
+    padding: 2dvh 0;
     transition: top 0.5s ease-in-out;
     box-shadow: 0 0 10px rgba(0, 0, 0, 1);
     justify-content: center;
