@@ -26,7 +26,7 @@ const handleScroll = () => {
     const scrollPosition = window.scrollY;
     const screenHeight = window.innerHeight;
 
-    if (scrollPosition > screenHeight / 2) {
+    if (scrollPosition > screenHeight / 1.5) {
     setOpacity(0);
     } else {
     setOpacity(1);
@@ -41,6 +41,7 @@ return () => {
 }, []);
 
     return (
+        <>
         <div className="home-container">
 
             <header className="home-header">
@@ -129,6 +130,13 @@ return () => {
                 </section>
             </section>
         </div>
+        <footer className='home-page-footer'>
+                 <div className="footer-contact-btn-div">
+                    <a href="/#/contact" className="contact-button">Contact Me</a>
+                    <a href="#" className="contact-button back-to-top-btn">Back To Top</a>
+                </div>
+            </footer>
+        </>
     );
 };
 

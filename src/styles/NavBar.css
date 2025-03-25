@@ -18,6 +18,7 @@
   align-items: center;
   width: var(--content-width);
   max-width: var(--content-width);
+  padding-left: 3dvw;
 }
 
 .navbar-logo {
@@ -52,8 +53,8 @@
 .navbar-toggle .Homebar {
   width: 30px;
   height: 3px;
-  background-color: var(--text-color);
   margin: 3.5px 0;
+  background-color: white;
 }
 
 .navbar-links a.active {
@@ -97,6 +98,7 @@
   .navbar-toggle {
     display: flex;
     margin-left: 3vw;
+    margin-top: 2rem;
   }
 
   .navbar-links a {
@@ -110,26 +112,17 @@
   }
 
   .navbar-toggle {
-    z-index: 999999999999;
+    z-index: 99 !important;
   }
 
   .Homebar {
-    background-color: black !important;
+    background-color: rgb(255, 255, 255) !important;
     transition: opacity 0.1s ease 0.1s, transform 0.3s ease 0.3s,
       background-color 0.3s ease 0.3s;
   }
 
   .navbar-toggle[aria-expanded="true"] {
     justify-content: space-between;
-  }
-
-  @keyframes fadeIn {
-    0% {
-      opacity: 0;
-    }
-    100% {
-      opacity: 1;
-    }
   }
 
   .navbar-toggle[aria-expanded="false"] .Homebar:nth-child(2) {

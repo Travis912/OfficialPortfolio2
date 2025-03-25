@@ -13,22 +13,22 @@ const NavBar = () => {
 
   useEffect(() => {
   const handleScroll = () => {
-      const scrollPosition = window.scrollY;
-      const screenHeight = window.innerHeight;
+    const scrollPosition = window.scrollY;
+    const threshold = window.innerHeight * 0.07; // 7dvh equivalent
 
-      if (scrollPosition > screenHeight / 1.3) {
+    if (scrollPosition > threshold) {
       setOpacity(0);
-      } else {
+    } else {
       setOpacity(1);
-      }
+    }
   };
 
   window.addEventListener('scroll', handleScroll);
 
   return () => {
-      window.removeEventListener('scroll', handleScroll);
+    window.removeEventListener('scroll', handleScroll);
   };
-  }, []);
+}, []);
 
   return (
     <nav className="navbar" style={{ opacity: opacity }}>
@@ -39,7 +39,7 @@ const NavBar = () => {
           <NavLink to="/resume" onClick={toggleMenu} className={({ isActive }) => isActive ? "active" : ""}>Resume</NavLink>
           <NavLink to="/contact" onClick={toggleMenu} className={({ isActive }) => isActive ? "active" : ""}>Contact</NavLink>
         </div>
-        <div className="navbar-toggle" aria-expanded={isOpen} onClick={toggleMenu}>
+        <div className="navbar-toggle" style={{ opacity: opacity }} aria-expanded={isOpen} onClick={toggleMenu}>
           <span className="Homebar"></span>
           <span className="Homebar"></span>
           <span className="Homebar"></span>
