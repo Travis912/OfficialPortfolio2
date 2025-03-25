@@ -129,13 +129,14 @@ return () => {
                                 ]}></Carousel>
                         </section>
                     </section>
-                </body>
-                <footer className='home-page-footer'>
+                    <footer className='home-page-footer'>
                         <div className="footer-contact-btn-div">
                         <a href="/#/contact" onClick={() => window.scrollTo({ top: 0 })} className="contact-button footer-contact-btn">CONTACT ME</a>
                         <a onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })} className="contact-button back-to-top-btn">Back To Top</a>
+                        <p>*Everything in this portfolio including featured projects are optimized for desktop and mobile (portrait mode) screen sizes</p>
                     </div>
                 </footer>
+                </body>
             </div>
         </>
     );

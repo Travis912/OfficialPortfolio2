@@ -79,7 +79,7 @@ const Resume = () => {
             </section>
             <footer className='home-page-footer'>
                     <div className="footer-contact-btn-div">
-                    <a onClick={() => window.scrollTo({ top: 0 })} href="/#/contact" className="contact-button">CONTACT ME</a>
+                    <a onClick={() => window.scrollTo({ top: 0 })} href="/#/contact" className="resume-contact-btn">CONTACT ME</a>
                     <a onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })} className="contact-button back-to-top-btn">Back To Top</a>
                 </div>
             </footer>
