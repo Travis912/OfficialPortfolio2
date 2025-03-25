@@ -70,7 +70,7 @@ const Carousel = ({ images }) => {
                     </div>
                     {images.map((image, index) => (
                         <div key={index} className="carousel-slide">
-                            <a href={image.link}>
+                            <a href={image.link} onClick={() => window.scrollTo({ top: 0 })}>
                                 <img src={image.image} alt={`Slide ${index}`} />
                             </a>
                         </div>

@@ -7,6 +7,7 @@ const NavBar = () => {
 
   const toggleMenu = () => {
     setIsOpen(!isOpen);
+    window.scrollTo({ top: 0});
   };
 
   const [opacity, setOpacity] = useState(1);
