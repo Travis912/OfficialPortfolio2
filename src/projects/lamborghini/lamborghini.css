@@ -14,7 +14,7 @@
   background-color: #181818;
   color: white;
   position: fixed;
-  min-height: 12.75vh;
+  min-height: 12.75dvh;
   width: 100%;
   z-index: 10;
   padding-left: 5vw;
@@ -94,16 +94,16 @@
 
 .lambo-nav-ul .ul-title,
 .lambo-nav-ul .ul-title-inactive {
-  padding-bottom: 3vh;
-  padding-top: 3vh;
+  padding-bottom: 3dvh;
+  padding-top: 3dvh;
 }
 
 .lambo-nav-ul li:nth-of-type(2) {
-  padding-top: 2vh;
+  padding-top: 2dvh;
 }
 
 .lambo-nav-ul li:last-of-type {
-  padding-bottom: 5vh;
+  padding-bottom: 5dvh;
 }
 
 .models,
@@ -137,7 +137,7 @@
 .second-lambo-nav-links-closed {
   display: flex;
   gap: 1rem;
-  padding: 3vh 0;
+  padding: 3dvh 0;
 }
 
 .second-lambo-nav-links,
@@ -208,12 +208,12 @@
 .desktop-menu-closed {
   display: flex;
   position: absolute;
-  height: 100vh;
+  height: 100dvh;
   width: 100%;
   background-color: #181818;
   left: 0px;
-  top: -100vh;
-  padding: 20vh 5vw;
+  top: -100dvh;
+  padding: 20dvh 5vw;
   transition: top 0.5s ease-in-out;
   flex-direction: column;
 }
@@ -288,7 +288,7 @@
 .lambo-desktop-lower-div {
   display: flex;
   justify-content: space-between;
-  height: 40vh;
+  height: 40dvh;
   font-size: 1.4rem;
   padding: 3rem 5rem;
 }
@@ -330,7 +330,7 @@
   width: 100%;
   max-width: 100%;
   overflow-x: hidden;
-  height: 100vh;
+  height: 100dvh;
   background: url(./lambo-header-desktop.webp);
   background-position: center;
   background-repeat: no-repeat;
@@ -360,7 +360,7 @@
   color: white;
   position: absolute;
   right: 12dvw;
-  bottom: 7vh;
+  bottom: 7dvh;
   font-size: 1.2rem;
 }
 
@@ -437,7 +437,7 @@
 .model-section {
   display: flex;
   flex-direction: column;
-  margin-top: 7vh;
+  margin-top: 7dvh;
   padding-left: 5dvw;
   padding-right: 5dvw;
   width: 100dvw;
@@ -483,7 +483,7 @@
 .lambo-room-div,
 .lambo-dealer-div {
   width: 100%;
-  height: 27vh;
+  height: 27dvh;
   background-size: cover;
   background-position: center;
   background-color: black;
@@ -495,7 +495,7 @@
 
 .lambo-dealer-div {
   background-image: url(./lambo-dealership.webp);
-  margin-top: 5vh;
+  margin-top: 5dvh;
 }
 
 .lambo-room-div {
@@ -641,7 +641,7 @@
   .lambo-main {
     display: flex;
     flex-direction: column;
-    gap: 5vh;
+    gap: 5dvh;
     margin: 0px;
   }
 
@@ -658,7 +658,7 @@
     margin: 0px;
     padding: 0px;
     gap: 0px;
-    height: 100vh;
+    height: 100dvh;
   }
 
   .model-section-text-div {
@@ -682,12 +682,12 @@
     position: absolute;
     width: 60%;
     z-index: -1;
-    max-height: 100vh;
+    max-height: 100dvh;
   }
 
   .temerario-section {
     flex-direction: row-reverse;
-    margin-top: 10vh;
+    margin-top: 10dvh;
   }
 
   .urus-section {
@@ -707,7 +707,7 @@
     flex-direction: row-reverse;
     max-width: 100%;
     position: relative;
-    height: 80vh;
+    height: 80dvh;
   }
 
   .concept-img {

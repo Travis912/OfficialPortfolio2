@@ -66,7 +66,7 @@
   display: flex;
   flex-direction: column;
   background-color: #f7f5eb;
-  height: 20vh;
+  height: 20dvh;
   color: black;
 }
 
@@ -181,13 +181,13 @@
 
 .banff-dropdown-div {
   position: absolute;
-  top: -80vh;
+  top: -80dvh;
   left: 0;
   width: 100%;
-  padding-top: 20vh;
+  padding-top: 20dvh;
   background-color: rgba(255, 255, 255);
   z-index: 1;
-  height: 80vh;
+  height: 80dvh;
 }
 
 .banff-dropdown-content {
@@ -208,7 +208,7 @@
 
 @keyframes banffDropdown {
   0% {
-    top: -80vh;
+    top: -80dvh;
   }
   100% {
     top: 0px;
@@ -313,7 +313,7 @@
 /* HEADER */
 
 .banff-header {
-  height: 90vh;
+  height: 90dvh;
   background-color: #f7f5eb;
   position: relative;
   padding: 0 var(--banff-side-padding);
@@ -324,7 +324,7 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  height: 105vh;
+  height: 105dvh;
   width: calc(100% - var(--banff-side-padding) * 2);
   top: 0;
   position: absolute;
@@ -607,7 +607,7 @@
 /* BODY */
 
 .banff-main {
-  height: 100vh;
+  height: 100dvh;
 }
 
 /* Get Inspired Section */
@@ -618,7 +618,7 @@
   align-items: start;
   justify-content: start;
   flex-direction: column;
-  padding-top: 20vh;
+  padding-top: 20dvh;
   padding-left: var(--banff-side-padding);
   padding-right: var(--banff-side-padding);
 }

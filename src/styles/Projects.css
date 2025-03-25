@@ -52,7 +52,7 @@
   top: 0px;
   width: fit-content;
   width: 5dvw;
-  height: 20vh;
+  height: 20dvh;
   font-size: 1.2rem;
   letter-spacing: 0.1rem;
   z-index: 10000;
@@ -69,8 +69,8 @@
   justify-content: center;
   align-items: center;
   width: 100dvw;
-  height: 100vh;
-  padding-top: 7vh;
+  height: 100dvh;
+  padding-top: 7dvh;
 }
 
 .bento-outer-container {
