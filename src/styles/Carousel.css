@@ -71,12 +71,12 @@
 .carousel-indicators {
   display: flex;
   justify-content: center;
-  margin-top: 10px;
+  margin-top: 15px;
 }
 
 .carousel-indicator {
-  width: 10px;
-  height: 10px;
+  width: 15px;
+  height: 15px;
   background-color: #ccc;
   border-radius: 50%;
   margin: 0 5px;
@@ -84,7 +84,7 @@
 }
 
 .carousel-indicator.active {
-  background-color: #333;
+  background-color: #ff7f50;
 }
 
 @media (max-width: 768px) {
