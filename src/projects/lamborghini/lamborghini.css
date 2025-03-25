@@ -953,14 +953,14 @@
   }
 
   .lambo-nav {
-    min-height: 10vh;
+    min-height: 1dvh;
     display: flex;
     align-items: center;
     position: relative;
   }
 
   .lambo-nav-left-div {
-    height: 8vh;
+    height: 8dvh;
     padding-right: 0px;
     padding-left: 50px;
   }
@@ -976,23 +976,23 @@
   .mobile-menu,
   .mobile-menu-closed {
     display: flex;
-    padding-top: 20vh;
+    padding-top: 15dvh;
     position: absolute;
     left: 0px;
     width: 100%;
     background-color: #181818;
     z-index: -1;
-    min-height: 150vh;
-    transition: bottom 0.5s ease-in-out;
+    min-height: 170dvh;
+    transition: top 0.5s ease-in-out;
     padding-left: 5vw;
   }
 
   .mobile-menu-closed {
-    bottom: 10vh;
+    top: -170dvh;
   }
 
   .mobile-menu {
-    bottom: -150vh;
+    top: 0px;
   }
 
   .mobile-menu ul,
@@ -1050,7 +1050,7 @@
     background-size: cover;
     width: 100dvw;
     justify-content: start;
-    padding-top: 15vh;
+    padding-top: 15dvh;
   }
 
   .lambo-header h1 {

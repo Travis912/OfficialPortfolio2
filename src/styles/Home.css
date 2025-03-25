@@ -13,6 +13,7 @@
   margin: 0 auto;
   align-items: center;
   background: linear-gradient(to top right, purple, #ff7f50);
+  /* took off side panels */
   padding: 0px 3dvw;
   overflow-y: hidden;
 }
@@ -75,7 +76,6 @@
 }
 
 .home-header-img img {
-  height: auto;
   width: 70%;
   object-fit: cover;
   object-position: center;
@@ -107,13 +107,27 @@
   color: white;
 }
 
+@keyframes flyInFromLeft {
+  0% {
+    transform: translateX(-100%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
 .home-header span {
-  color: var(--accent-color);
-  font-weight: bold;
+  color: #ff7f50;
+  font-weight: bolder;
+  font-size: 2.5rem;
+  display: inline-block; /* Ensure the span behaves properly */
+  animation: flyInFromLeft 1s ease-out; /* Adjust duration and easing as needed */
 }
 
 .contact-button {
-  background-color: var(--accent-color);
+  background-color: white;
   color: black;
   width: fit-content;
   padding: 10px 20px;
@@ -139,7 +153,8 @@
   align-items: center;
   width: 100%;
   background-color: rgb(240, 240, 240);
-  max-width: var(--content-width);
+  /* took off side panels */
+  max-width: 100%;
   padding: 0px 3dvw;
   box-shadow: 0px 0px 5px 3px rgba(0, 0, 0, 0.5);
   z-index: 5;
@@ -171,8 +186,6 @@
   width: 100%;
   text-wrap: wrap;
   max-width: var(--content-width);
-  padding-left: 1dvw;
-  padding-right: 1dvw;
 }
 
 .home-about h2,
@@ -251,7 +264,6 @@
   max-width: var(--content-width);
   width: 100%;
   height: 70dvh;
-  padding-left: 1dvw;
 }
 
 .video {
@@ -264,21 +276,21 @@
 /* Featured project section */
 
 .ft-section {
-  margin-right: -3dvw;
-  margin-left: -3dvw;
+  margin: 0 -3dvw;
 }
 
 .ft-section-heading-container {
   display: flex;
   width: 100%;
-  justify-content: center;
-  padding: 5dvh 0px;
+  padding: 3dvh 0px;
+  margin: 0 auto;
+  max-width: var(--content-width);
 }
 
 #featured-projects-heading {
   margin-top: var(--section-spacing);
   margin-bottom: 0px;
-  color: white;
+  color: black;
   font-size: 3rem;
 }
 
@@ -318,6 +330,7 @@
 }
 
 /* FOOTER */
+
 .home-page-footer {
   width: 100%;
   height: 30dvh;
@@ -340,8 +353,14 @@
   gap: 10px;
 }
 
+.footer-contact-btn {
+  background: linear-gradient(to right, #ff7f50, purple);
+  color: white;
+}
+
 .back-to-top-btn {
-  background-color: white;
+  background: linear-gradient(to right, #ff7f50, purple);
+  color: white;
 }
 
 .footer-contact-info a {
@@ -441,5 +460,13 @@
   .home-body {
     margin-top: 80dvh;
     padding-top: 5dvh;
+  }
+
+  .ft-section-heading-container {
+    padding-left: 8dvw;
+  }
+
+  .ft-section-heading-container h2 {
+    font-size: 2rem !important;
   }
 }

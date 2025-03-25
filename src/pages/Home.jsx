@@ -50,8 +50,8 @@ return () => {
 
                         <div className='home-header-text-container' style={{ opacity: opacity }}>
                             <div className='home-header-text'>
-                                <h4>Hello</h4>
-                                <h1>I&apos;m <span>Travis</span></h1>
+                                <h4>Hello, I&apos;m</h4>
+                                <h4><span>Travis</span> and I am a</h4>
                                 <h1>Front-End Engineer</h1>
                                 <a onClick={() => window.scrollTo({ top: 0 })} href="/#/contact" className="contact-button">Contact Me</a>
                             </div>
@@ -116,26 +116,27 @@ return () => {
                         </p>
 
                     </section>
-                </body>
-                <section className='ft-section'>
-                    <div className='ft-section-heading-container'>
-                        <h2 id='featured-projects-heading'>Featured Projects</h2>
-                    </div>
-                    <section className="home-projects">
-                        <Carousel images={[
-                            {image: LamborghiniImg, link: '/#/lamborghini'},
-                            {image: starlink, link: '/#/starlink'},
-                            {image: banffImg, link: '/#/banff'},
-                            ]}></Carousel>
+
+                    <section className='ft-section'>
+                        <div className='ft-section-heading-container'>
+                            <h2 id='featured-projects-heading'>Featured Projects</h2>
+                        </div>
+                        <section className="home-projects">
+                            <Carousel images={[
+                                {image: LamborghiniImg, link: '/#/lamborghini'},
+                                {image: starlink, link: '/#/starlink'},
+                                {image: banffImg, link: '/#/banff'},
+                                ]}></Carousel>
+                        </section>
                     </section>
-                </section>
+                </body>
+                <footer className='home-page-footer'>
+                        <div className="footer-contact-btn-div">
+                        <a href="/#/contact" onClick={() => window.scrollTo({ top: 0 })} className="contact-button footer-contact-btn">CONTACT ME</a>
+                        <a onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })} className="contact-button back-to-top-btn">Back To Top</a>
+                    </div>
+                </footer>
             </div>
-            <footer className='home-page-footer'>
-                    <div className="footer-contact-btn-div">
-                    <a href="/#/contact" onClick={() => window.scrollTo({ top: 0 })} className="contact-button">Contact Me</a>
-                    <a onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })} className="contact-button back-to-top-btn">Back To Top</a>
-                </div>
-            </footer>
         </>
     );
 };
