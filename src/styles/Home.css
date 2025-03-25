@@ -378,8 +378,7 @@
 
   .home-expertise,
   .home-about,
-  .home-contact,
-  .home-video-container {
+  .home-contact {
     padding-left: 5dvw;
     padding-right: 5dvw;
     line-height: 1.5rem;
@@ -395,7 +394,7 @@
 
   .expertise-list li,
   .responsive-design {
-    width: 75px;
+    width: 100px;
     height: 100%;
   }
 
@@ -405,8 +404,8 @@
   }
 
   .responsive-design {
-    gap: 10px;
     height: 100%;
     padding-bottom: 10px;
+    width: 100px;
   }
 }
