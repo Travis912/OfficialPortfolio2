@@ -333,13 +333,14 @@
 
 .home-page-footer {
   width: 100%;
-  height: 30dvh;
+  min-height: 40dvh;
+  height: 100%;
   display: flex;
   justify-content: center;
   gap: 10dvw;
   align-items: center;
   background-color: rgb(240, 240, 240);
-  padding: 0 5dvw;
+  padding: 5dvh 5dvw;
   z-index: 5;
   text-align: center;
 }
