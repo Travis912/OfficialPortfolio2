@@ -51,3 +51,8 @@
 .resume-details {
   padding-left: 1vw;
 }
+
+.contact-button {
+  background: linear-gradient(to right, #ff7f50, purple);
+  color: white;
+}

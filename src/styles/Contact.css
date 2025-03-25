@@ -70,7 +70,7 @@
 .contact-form-input::placeholder {
   color: var(--text-color);
   font-size: 1.5rem;
-  color: var (--accent-color);
+  color: #ff7f50;
   letter-spacing: 0.08rem;
 }
 
@@ -78,7 +78,7 @@
   width: 100%;
   height: 10rem;
   margin-top: 1rem;
-  border: 2px solid var(--accent-color);
+  border: 2px solid #ff7f50;
 }
 
 .contact-form-input {
@@ -86,7 +86,7 @@
   background-color: none;
   border: none;
   background-color: rgb(240, 240, 240);
-  border-bottom: 2px solid var(--accent-color);
+  border-bottom: 2px solid #ff7f50;
   width: 100%;
   height: 2rem;
   font-size: 1.5rem;
@@ -98,6 +98,7 @@
   font-size: 2.5rem;
   letter-spacing: 0.1rem;
   padding: 1rem;
+  color: black !important;
 }
 
 .contact-submit-btn:hover {
