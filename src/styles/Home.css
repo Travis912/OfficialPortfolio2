@@ -12,7 +12,11 @@
   width: 100%;
   margin: 0 auto;
   align-items: center;
-  background: linear-gradient(to top right, purple, #ff7f50);
+  background: linear-gradient(
+    to top right,
+    rgba(173, 216, 230, 0.6),
+    rgba(11, 71, 121, 0.8)
+  );
   /* took off side panels */
   padding: 0px 3dvw;
   overflow-y: hidden;
@@ -88,11 +92,11 @@
 
 .home-header h1 {
   font-size: 2.5rem;
-  color: white;
+  color: #ffffe0;
 }
 
 .home-header h4 {
-  color: white;
+  color: #ffffe0;
   font-weight: 400;
   letter-spacing: 0.1rem;
   font-size: 1.1rem;
@@ -104,7 +108,7 @@
 
 .home-header p {
   font-size: 1.2rem;
-  color: white;
+  color: #ffffe0;
 }
 
 @keyframes flyInFromLeft {
@@ -119,7 +123,7 @@
 }
 
 .home-header span {
-  color: #ff7f50;
+  color: #ffd700;
   font-weight: bolder;
   font-size: 2.5rem;
   display: inline-block; /* Ensure the span behaves properly */
@@ -139,6 +143,11 @@
   margin-top: 5px;
   letter-spacing: 0.07em;
   box-shadow: 0px 0px 5px 3px rgba(0, 0, 0, 0.5);
+}
+
+.home-header-text a {
+  margin-top: 20px;
+  font-weight: 600;
 }
 
 .contact-button:hover {
@@ -194,6 +203,7 @@
   font-size: 2rem;
   color: var(--primary-color);
   margin-bottom: 20px;
+  line-height: 3rem;
 }
 
 .home-about p,
@@ -356,12 +366,20 @@
 }
 
 .footer-contact-btn {
-  background: linear-gradient(to right, #ff7f50, purple);
+  background: linear-gradient(
+    to top right,
+    rgb(142, 198, 216),
+    rgba(11, 71, 121, 1)
+  );
   color: white;
 }
 
 .back-to-top-btn {
-  background: linear-gradient(to right, #ff7f50, purple);
+  background: linear-gradient(
+    to top right,
+    rgb(142, 198, 216),
+    rgba(11, 71, 121, 1)
+  );
   color: white;
 }
 
@@ -436,6 +454,11 @@
     padding-left: 5dvw;
     padding-right: 5dvw;
     line-height: 1.5rem;
+  }
+
+  .home-expertise h2 {
+    font-size: 2rem;
+    line-height: 4rem;
   }
 
   .navbar-toggle[aria-expanded="true"] {

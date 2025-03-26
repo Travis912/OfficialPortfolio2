@@ -45,10 +45,14 @@
 .banff-above-nav-div ul li {
   margin-left: 2vw;
   font-size: 0.9rem;
+  display: flex;
+  flex-direction: row;
+  height: 100%;
 }
 
-.banff-above-nav-div ul li i {
+.banff-above-nav-div ul li svg {
   color: #b25340;
+  height: 100%;
 }
 
 .banff-above-nav-div ul li:hover {
@@ -139,7 +143,7 @@
   transform: translateY(0);
 }
 
-.banff-nav-links li a i {
+.banff-nav-links li a svg {
   color: #b25340;
   font-size: 0.5rem;
 }
@@ -162,13 +166,13 @@
   z-index: 2;
 }
 
-.banff-nav-icons i {
+.banff-nav-icons svg {
   font-size: 1.5rem;
   margin-right: 1.5vw;
   padding: 0.5vw;
 }
 
-.banff-nav-icons i:hover {
+.banff-nav-icons svg:hover {
   cursor: pointer;
   color: #b25340;
 }
@@ -403,7 +407,7 @@
   background-image: url(./F3.avif);
 }
 
-.banffHeaderLayout-content-div button i {
+.banffHeaderLayout-content-div button svg {
   margin-right: 0.5rem;
   font-size: 1rem;
   color: rgba(255, 255, 255, 0.85);
@@ -774,7 +778,7 @@
   font-size: 1rem;
 }
 
-.days-and-experinces-div i {
+.days-and-experinces-div svg {
   color: #b25340;
   margin-right: 0.5rem;
   font-size: 0.9rem;
@@ -892,7 +896,7 @@
   color: white;
 }
 
-.before-you-go-card i {
+.before-you-go-card svg {
   font-size: 1.5rem;
   margin-bottom: 1rem;
 }
@@ -1258,7 +1262,7 @@
   background-color: #b25340;
 }
 
-.banff-footer-top-left-div button i {
+.banff-footer-top-left-div button svg {
   margin-right: 1rem;
 }
 
@@ -1268,7 +1272,7 @@
   margin-top: 2rem;
 }
 
-.banff-footer-top-left-div div i {
+.banff-footer-top-left-div div svg {
   padding: 0.5rem;
   background-color: #43273b;
   color: white;

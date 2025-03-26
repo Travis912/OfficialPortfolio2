@@ -84,7 +84,7 @@
 }
 
 .carousel-indicator.active {
-  background-color: #ff7f50;
+  background-color: rgba(11, 71, 121, 1);
 }
 
 @media (max-width: 768px) {

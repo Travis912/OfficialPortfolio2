@@ -3,6 +3,13 @@
   "homepage": "https://www.travismounsteven.ca/",
   "version": "0.0.0",
   "type": "module",
+  "description": "A set of free MIT-licensed high-quality SVG icons for UI development.",
+  "keywords": [
+    "icons",
+    "svg",
+    "react",
+    "tailwindcss"
+  ],
   "scripts": {
     "dev": "vite",
     "build": "vite build",
@@ -12,6 +19,7 @@
     "deploy": "gh-pages -d dist"
   },
   "dependencies": {
+    "@emailjs/browser": "^4.4.1",
     "@fortawesome/fontawesome-svg-core": "^6.7.2",
     "@fortawesome/free-solid-svg-icons": "^6.7.2",
     "@fortawesome/react-fontawesome": "^0.2.2",
