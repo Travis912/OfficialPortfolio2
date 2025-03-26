@@ -14,7 +14,7 @@ import banffImg from '../assets/banffLouise.jpeg';
 import starlink from '../assets/starlink.jpeg';
 import smallLamborghiniImg from '../assets/small-lambo.jpeg';
 import smallBanffImg from '../assets/small-Banff.jpeg';
-import smallStarlink from '../assets/small-Starlink.jpeg';
+import smallStarlink from '../assets/small-starlink.jpeg';
 
 /* Expertise Logo's */
 import html from '../assets/html.png';
