@@ -1,10 +1,20 @@
 import '../styles/Home.css'
 import { useState, useEffect, useRef } from 'react';
-import headshot from '../assets/headshotNoBg.png';
+
+/* Components */
 import Carousel from '../components/carousel';
+
+/* Header images */
+import headshot from '../assets/headshotNoBg.png';
+import cloud from '../assets/cloud.png';
+
+/* Carousel Images */
 import LamborghiniImg from '../assets/lamborghini.jpeg';
 import banffImg from '../assets/banffLouise.jpeg';
 import starlink from '../assets/starlink.jpeg';
+import smallLamborghiniImg from '../assets/small-lambo.jpeg';
+import smallBanffImg from '../assets/small-Banff.jpeg';
+import smallStarlink from '../assets/small-Starlink.jpeg';
 
 /* Expertise Logo's */
 import html from '../assets/html.png';
@@ -21,6 +31,11 @@ const Home = () => {
 
 const [opacity, setOpacity] = useState(1);
 const homeRef = useRef(null);
+const [carouselImages, setCarouselImages] = useState([
+    { image: LamborghiniImg, link: '/#/lamborghini' },
+    { image: starlink, link: '/#/starlink' },
+    { image: banffImg, link: '/#/banff' },
+]);
 
 useEffect(() => {
 const handleScroll = () => {
@@ -39,6 +54,31 @@ window.addEventListener('scroll', handleScroll);
 return () => {
     window.removeEventListener('scroll', handleScroll);
 };
+}, []);
+
+useEffect(() => {
+    const updateImages = () => {
+        if (window.innerWidth <= 768) {
+            setCarouselImages([
+                { image: smallLamborghiniImg, link: '/#/lamborghini' },
+                { image: smallStarlink, link: '/#/starlink' },
+                { image: smallBanffImg, link: '/#/banff' },
+            ]);
+        } else {
+            setCarouselImages([
+                { image: LamborghiniImg, link: '/#/lamborghini' },
+                { image: starlink, link: '/#/starlink' },
+                { image: banffImg, link: '/#/banff' },
+            ]);
+        }
+    };
+
+    updateImages();
+    window.addEventListener('resize', updateImages);
+
+    return () => {
+        window.removeEventListener('resize', updateImages);
+    };
 }, []);
 
     return (
@@ -61,7 +101,9 @@ return () => {
                             </div>
                         </div>
                         <div className='home-header-img' style={{ opacity: opacity }}>
-                            <img src={headshot} alt="Travis" />
+                            <img className='hs' src={headshot} alt="Travis" />
+                            <img className='cloud-One' src={cloud} alt="cloud" />
+                            <img className='cloud-Two' src={cloud} alt="cloud" />
                         </div>
                     </div>
                 </header>
@@ -125,11 +167,7 @@ return () => {
                             <h2 id='featured-projects-heading'>Featured Projects</h2>
                         </div>
                         <section className="home-projects">
-                            <Carousel images={[
-                                {image: LamborghiniImg, link: '/#/lamborghini'},
-                                {image: starlink, link: '/#/starlink'},
-                                {image: banffImg, link: '/#/banff'},
-                                ]}></Carousel>
+                            <Carousel images={carouselImages}></Carousel>
                         </section>
                     </section>
                     <footer className='home-page-footer'>
