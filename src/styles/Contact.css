@@ -30,6 +30,7 @@
 
 .contact-content-container {
   display: flex;
+  position: relative;
   flex-direction: column;
   max-width: var(--content-width);
   width: 100%;
@@ -99,14 +100,55 @@
 }
 
 .contact-submit-btn {
-  font-size: 2.5rem;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  font-size: 4rem;
   letter-spacing: 0.1rem;
-  padding: 1rem;
+  padding: 0.3rem;
   color: black !important;
+  width: fit-content;
+  margin: 0 auto;
+  border: 3px solid black;
+  border-radius: 10px;
+  margin-top: 1rem;
+  margin-bottom: 2rem;
 }
 
-.contact-submit-btn:hover {
-  text-decoration: underline;
+.contact-submit-btn svg {
+  width: 40px;
+  height: 40px;
+  transform: rotate(-45deg);
+  margin-left: 1rem;
+}
+
+.contact-submit-btn:hover h6,
+.contact-submit-btn:hover svg {
+  color: rgba(11, 71, 121, 1);
+}
+
+.success-message {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  top: calc(50% - 100px);
+  left: calc(50% - 100px);
+  padding: 10px;
+  background-color: #d4edda;
+  color: #155724;
+  border: 1px solid #c3e6cb;
+  border-radius: 5px;
+  text-align: center;
+  width: 200px;
+  height: 200px;
+}
+
+.success-message svg {
+  width: 100px;
+  height: 100px;
+  color: #155724;
 }
 
 @media (max-width: 768px) {

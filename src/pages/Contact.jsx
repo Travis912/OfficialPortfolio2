@@ -1,27 +1,30 @@
 import '../styles/Contact.css';
 import emailjs from '@emailjs/browser';
-import { useRef } from 'react';
+import { useRef, useState } from 'react';
 
 const Contact = () => {
 
-    const form = useRef();
+const [successMessage, setSuccessMessage] = useState(false);
+const form = useRef();
 
-  const sendEmail = (e) => {
-    e.preventDefault();
+const sendEmail = (e) => {
+e.preventDefault();
 
-    emailjs
-      .sendForm('service_lyc1mrm', 'template_ugwfonr', form.current, {
-        publicKey: 'Z-1JEP5h3M5CBotBx',
-      })
-      .then(
-        () => {
-          console.log('SUCCESS!');
-        },
-        (error) => {
-          console.log('FAILED...', error.text);
-        },
-      );
-  };
+emailjs
+    .sendForm('service_lyc1mrm', 'template_ugwfonr', form.current, {
+    publicKey: 'Z-1JEP5h3M5CBotBx',
+    })
+    .then(
+    () => {
+        console.log('SUCCESS!');
+        setSuccessMessage(true); // Show success message
+        setTimeout(() => setSuccessMessage(false), 3000); // Hide after 5 seconds
+    },
+    (error) => {
+        console.log('FAILED...', error.text);
+    },
+    );
+};
 
     return (
         <section className='enitre-contact-section'>
@@ -56,8 +59,21 @@ const Contact = () => {
                             <label htmlFor="message"></label>
                             <textarea className="contact-form-input" id="message" name="message" placeholder='Message*' required></textarea>
                         </div>
-                        <button className="contact-submit-btn" type="submit" value="Send">Send Message</button>
+                        <button className="contact-submit-btn" type="submit" value="Send">
+                            <h6>Send Message</h6>
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="size-6">
+                                <path strokeLinecap="round" strokeLinejoin="round" d="M6 12 3.269 3.125A59.769 59.769 0 0 1 21.485 12 59.768 59.768 0 0 1 3.27 20.875L5.999 12Zm0 0h7.5" />
+                            </svg>
+                        </button>
                     </form>
+                    {successMessage && ( // Conditionally render success message
+                        <div className="success-message">
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="size-6">
+                            <path strokeLinecap="round" strokeLinejoin="round" d="m4.5 12.75 6 6 9-13.5" />
+                            </svg>
+                            <p>Sent!</p>
+                        </div>
+                    )}
                 </div>
             </div>
         </section>

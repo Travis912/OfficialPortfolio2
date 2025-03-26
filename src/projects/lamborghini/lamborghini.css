@@ -117,7 +117,7 @@
 }
 
 .lambo-nav-left-div img {
-  height: 69px;
+  height: 50px;
   position: fixed;
   top: 1.8rem;
   margin-left: -100px;
@@ -173,12 +173,15 @@
   margin-left: 1rem;
 }
 
-.lambo-nav-icon-container i {
-  font-size: 1.6rem;
+.lambo-nav-icon-container svg {
+  color: grey;
+  width: 40px;
+  height: 40px;
 }
 
-.lambo-nav-icon-container i:hover {
+.lambo-nav-icon-container svg:hover {
   cursor: pointer;
+  color: white;
 }
 
 .hamburger {
@@ -613,6 +616,10 @@
   width: 100%;
 }
 
+.lambo-hide {
+  color: #181818 !important;
+}
+
 /* Desktop screen size only below */
 
 @media screen and (min-width: 1264px) {
@@ -988,7 +995,7 @@
   }
 
   .mobile-menu-closed {
-    top: -170dvh;
+    top: -185dvh;
   }
 
   .mobile-menu {

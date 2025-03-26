@@ -91,9 +91,15 @@ export default function BanffNav() {
                 <div className='banff-lower-nav-div' aria-expanded={isMenuOpen}>
 
                     <div className="banff-hamburger-icon" onClick={toggleMenu}>
-                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="size-6">
-                            <path strokeLinecap="round" strokeLinejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
-                        </svg>
+                        {isMenuOpen ? (
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="size-6">
+                                <path strokeLinecap="round" strokeLinejoin="round" d="M6 18 18 6M6 6l12 12" />
+                            </svg>
+                        ) : (
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="size-6">
+                                <path strokeLinecap="round" strokeLinejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
+                            </svg>
+                        )}
                     </div>
                     <BanffNavDropdown className="BanffNavDropdown-mobile" mobileMenuOpen={isMenuOpen}/>
 
@@ -103,7 +109,16 @@ export default function BanffNav() {
                         <ul className="banff-nav-links">
 
                             <li  aria-expanded={isDropdownOpen} className='banff-ATP-nav'>
-                                <a onClick={toggleATPDropdown}>About This place  <i className={isDropdownOpen && dropdownContent === 'ATP' ? "fas fa-chevron-up" : "fas fa-chevron-down"}></i></a>
+                                <a onClick={toggleATPDropdown}>About This place
+                                    {isDropdownOpen && dropdownContent === 'ATP' ?
+                                        (<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="size-6">
+                                            <path strokeLinecap="round" strokeLinejoin="round" d="m4.5 15.75 7.5-7.5 7.5 7.5" />
+                                            </svg>
+                                        ) : ( <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="size-6">
+                                                <path strokeLinecap="round" strokeLinejoin="round" d="m19.5 8.25-7.5 7.5-7.5-7.5" />
+                                                </svg>
+                                        )}
+                                </a>
                                 <div className="banff-dropdown-div">
                                     <div className='banff-dropdown-content'>
                                        <BanffNavDropdown dropdownContent={dropdownContent} mobileMenuOpen={isMenuOpen}/>
@@ -112,7 +127,14 @@ export default function BanffNav() {
                             </li>
 
                             <li aria-expanded={isDropdownOpen} className='banff-VI-nav'>
-                                <a onClick={toggleVIDropdown}>Visitor Info <i className={isDropdownOpen && dropdownContent === 'VI' ? "fas fa-chevron-up" : "fas fa-chevron-down"}></i></a>
+                                <a onClick={toggleVIDropdown}>Visitor Info {isDropdownOpen && dropdownContent === 'VI' ?
+                                        (<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="size-6">
+                                            <path strokeLinecap="round" strokeLinejoin="round" d="m4.5 15.75 7.5-7.5 7.5 7.5" />
+                                            </svg>
+                                        ) : ( <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="size-6">
+                                                <path strokeLinecap="round" strokeLinejoin="round" d="m19.5 8.25-7.5 7.5-7.5-7.5" />
+                                                </svg>
+                                        )}</a>
                                 <div className="banff-dropdown-div">
                                     <div className='banff-dropdown-content'>
                                         <BanffNavDropdown dropdownContent={dropdownContent} mobileMenuOpen={isMenuOpen}/>
@@ -121,7 +143,14 @@ export default function BanffNav() {
                             </li>
 
                             <li aria-expanded={isDropdownOpen} className='banff-TTD-nav'>
-                                <a onClick={toggleTTDropdown}>Things To Do <i className={isDropdownOpen && dropdownContent === 'TTD' ? "fas fa-chevron-up" : "fas fa-chevron-down"}></i></a>
+                                <a onClick={toggleTTDropdown}>Things To Do {isDropdownOpen && dropdownContent === 'TTD' ?
+                                        (<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="size-6">
+                                            <path strokeLinecap="round" strokeLinejoin="round" d="m4.5 15.75 7.5-7.5 7.5 7.5" />
+                                            </svg>
+                                        ) : ( <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="size-6">
+                                                <path strokeLinecap="round" strokeLinejoin="round" d="m19.5 8.25-7.5 7.5-7.5-7.5" />
+                                                </svg>
+                                        )}</a>
                                 <div className="banff-dropdown-div">
                                     <div className='banff-dropdown-content'>
                                         <BanffNavDropdown dropdownContent={dropdownContent} mobileMenuOpen={isMenuOpen}/>
@@ -133,8 +162,12 @@ export default function BanffNav() {
                             <li><a>Trip Ideas</a></li>
                         </ul>
                         <div className="banff-nav-icons">
-                            <i className="fas fa-search"></i>
-                            <i className="fas fa-bookmark"></i>
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="size-6">
+                                <path strokeLinecap="round" strokeLinejoin="round" d="m21 21-5.197-5.197m0 0A7.5 7.5 0 1 0 5.196 5.196a7.5 7.5 0 0 0 10.607 10.607Z" />
+                            </svg>
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="size-6">
+                                <path strokeLinecap="round" strokeLinejoin="round" d="M17.593 3.322c1.1.128 1.907 1.077 1.907 2.185V21L12 17.25 4.5 21V5.507c0-1.108.806-2.057 1.907-2.185a48.507 48.507 0 0 1 11.186 0Z" />
+                            </svg>
                             <button className="build-trip-btn">Build a Trip</button>
                         </div>
                     </div>

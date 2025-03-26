@@ -1,5 +1,5 @@
 import '../styles/Home.css'
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useRef } from 'react';
 import headshot from '../assets/headshotNoBg.png';
 import Carousel from '../components/carousel';
 import LamborghiniImg from '../assets/lamborghini.jpeg';
@@ -20,6 +20,7 @@ import responsive from '../assets/responsivedesign.png';
 const Home = () => {
 
 const [opacity, setOpacity] = useState(1);
+const homeRef = useRef(null);
 
 useEffect(() => {
 const handleScroll = () => {
@@ -53,19 +54,21 @@ return () => {
                                 <h4>Hello, I&apos;m</h4>
                                 <h4><span>Travis</span> and I am a</h4>
                                 <h1>Front-End Engineer</h1>
-                                <a onClick={() => window.scrollTo({ top: 0 })} href="/#/contact" className="contact-button">Contact Me</a>
+                                <a id='home-hero-contact-btn' onClick={() => window.scrollTo({ top: 0 })} href="/#/contact" className="contact-button">Contact Me</a>
+                                <svg onClick={() => homeRef.current.scrollIntoView({ behavior: 'smooth' })} xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="size-6">
+                                <path strokeLinecap="round" strokeLinejoin="round" d="m4.5 5.25 7.5 7.5 7.5-7.5m-15 6 7.5 7.5 7.5-7.5" />
+                                </svg>
                             </div>
                         </div>
-
                         <div className='home-header-img' style={{ opacity: opacity }}>
                             <img src={headshot} alt="Travis" />
                         </div>
                     </div>
                 </header>
 
-                <body className="home-body">
+                <body className="home-body" ref={homeRef}>
 
-                    <section className="home-expertise">
+                    <section className="home-expertise" id='home-expertise'>
                         <h2>My Expertise:</h2>
                         <ul className='expertise-list'>
                             <li><img className='expertise-logos' src={react} alt='React'></img></li>

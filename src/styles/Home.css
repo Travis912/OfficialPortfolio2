@@ -53,6 +53,22 @@
   padding: 0px 3dvw;
 }
 
+.home-header-and-text-container svg {
+  position: absolute;
+  z-index: 3;
+  color: rgba(255, 255, 255, 0.8);
+  width: 50px;
+  height: 50px;
+  left: calc(50% - 10px);
+  bottom: 0px;
+  padding: 0.5rem;
+}
+
+.home-header-and-text-container svg:hover {
+  color: white;
+  cursor: pointer;
+}
+
 .home-header-text-container {
   display: flex;
   justify-content: center;
@@ -67,6 +83,7 @@
   justify-content: center;
   width: fit-content;
   padding-left: 1dvw;
+  position: relative;
 }
 
 .home-header-img {
@@ -216,6 +233,7 @@
 .home-expertise h2 {
   font-size: 2.5rem;
   line-height: 5rem;
+  margin-top: 2rem;
 }
 
 .expertise-list {
@@ -459,6 +477,10 @@
   .home-expertise h2 {
     font-size: 2rem;
     line-height: 4rem;
+  }
+
+  .home-header-and-text-container svg {
+    display: none;
   }
 
   .navbar-toggle[aria-expanded="true"] {
