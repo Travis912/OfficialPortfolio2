@@ -136,7 +136,7 @@ return () => {
                         <div className="footer-contact-btn-div">
                         <a href="/#/contact" onClick={() => window.scrollTo({ top: 0 })} className="contact-button footer-contact-btn">CONTACT ME</a>
                         <a onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })} className="contact-button back-to-top-btn">Back To Top</a>
-                        <p>*Everything in this portfolio including featured projects are optimized for desktop and mobile (portrait mode) screen sizes</p>
+                        <p>*Everything in this portfolio including featured projects are optimized for all screen sizes</p>
                         <p>All featured projects are cloned using only CSS, React, JavaScript, and HTML. No components or styles were imported. Everything was hand coded by myself starting from scratch. Visually copied www.lamborghini.com/en-en/models page, www.starlink.com home page, and www.banfflakelouise.com home page</p>
                     </div>
                 </footer>
