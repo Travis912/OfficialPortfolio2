@@ -24,6 +24,7 @@
 
 .Resume-page h1 {
   margin-top: 2dvh;
+  font-size: 2rem;
 }
 
 .resume-list-containers {
@@ -32,6 +33,7 @@
   gap: 2dvh;
   padding-top: 2dvh;
   padding-bottom: 2dvh;
+  padding-left: 50px;
 }
 
 .resume-title {
@@ -47,9 +49,23 @@
   gap: 1dvh;
 }
 
+.resume-list-containers h6 {
+  font-size: 1rem;
+  padding-left: 20px;
+}
+
 .resume-list-containers li p:first-of-type {
   font-style: italic;
   font-size: 0.9rem;
+}
+
+.resume-list-containers li p:not(:first-of-type) {
+  color: rgb(30, 30, 30);
+  padding-left: 30px;
+}
+
+.second-bullet-point {
+  margin-left: 30px;
 }
 
 .resume-details {

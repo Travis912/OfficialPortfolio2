@@ -5,6 +5,9 @@
 }
 
 /* HEADER */
+.home-container * {
+  font-family: cursive;
+}
 
 .home-container {
   display: flex;
@@ -563,6 +566,7 @@
   .home-expertise h2 {
     font-size: 2rem;
     line-height: 4rem;
+    margin-top: 0px;
   }
 
   .home-header-and-text-container svg {
