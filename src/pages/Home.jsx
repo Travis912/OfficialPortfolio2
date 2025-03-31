@@ -127,7 +127,7 @@ useEffect(() => {
                             </div>
                         </ul>
                     </section>
-
+{/*
                     <section className="home-video-container">
                         <h2>Me in 30 seconds</h2>
                         <iframe
@@ -140,7 +140,7 @@ useEffect(() => {
                             allowFullScreen>
                         </iframe>
                     </section>
-
+*/}
                     <section className="home-about">
                         <h2>Over The Past Few Years</h2>
                         <br></br>
