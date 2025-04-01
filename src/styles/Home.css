@@ -5,9 +5,12 @@
 }
 
 /* HEADER */
+
+/*
 .home-container * {
   font-family: cursive;
 }
+*/
 
 .home-container {
   display: flex;
