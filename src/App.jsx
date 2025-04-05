@@ -9,20 +9,11 @@ import Resume from './pages/Resume'
 import Contact from './pages/Contact'
 import Projects from './pages/Projects'
 
-/* Space project */
-import Space from './projects/space/space'
-import TheCrew from './projects/space/spaceTheCrew.jsx'
-import SpaceDestinations from './projects/space/spaceDestinations.jsx'
-import Technology from './projects/space/spaceTechnology.jsx'
-
-/* Starlink */
+/* Other Projects */
 import Starlink from './projects/starlink/starlink.jsx';
-
-/* Lamborghini */
 import Lamborghini from './projects/lamborghini/lamborghini.jsx';
-
-/* Banff */
 import Banff from './projects/banff/banff.jsx';
+import ConnectFour from './projects/connectFour/connectFour.jsx';
 
 function App() {
   return (
@@ -32,13 +23,10 @@ function App() {
         <Route path="/resume" element={<><NavBar /><Resume /></>} />
         <Route path="/contact" element={<><NavBar /><Contact /></>} />
         <Route path="/projects" element={<><NavBar /><Projects /></>} />
-        <Route path="/space" element={<><Back /><Space /></>} />
-        <Route path="/spaceDestinations" element={<><Back /><SpaceDestinations /></>} />
-        <Route path="/theCrew" element={<><Back /><TheCrew /></>} />
-        <Route path="/technology" element={<><Back /><Technology /></>} />
         <Route path="/starlink" element={<><Back /><Starlink /></>} />
         <Route path="/lamborghini" element={<><Back /><Lamborghini /></>} />
         <Route path="/banff" element={<><Back /><Banff /></>} />
+        <Route path="/connectFour" element={<><Back /><ConnectFour /></>} />
       </Routes>
     </HashRouter>
   )
